@@ -1,4 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dh6h2aj4wrj1n"]
+[gd_scene load_steps=8 format=3 uid="uid://dh6h2aj4wrj1n"]
+
+[ext_resource type="Script" uid="uid://bh6tmdb26jcdc" path="res://character_body_3d.gd" id="1_ig7tw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rxg2q"]
 
@@ -14,6 +16,8 @@ sky = SubResource("Sky_rxg2q")
 [sub_resource type="BoxShape3D" id="BoxShape3D_rxg2q"]
 size = Vector3(3.862793, 0.48095703, 6.4418335)
 
+[sub_resource type="BoxMesh" id="BoxMesh_7dm0k"]
+
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -21,6 +25,7 @@ environment = SubResource("Environment_rxg2q")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8487115, 0)
+script = ExtResource("1_ig7tw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
 shape = SubResource("CapsuleShape3D_rxg2q")
@@ -33,3 +38,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5404607, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0035429, -0.25952148, -0.004180908)
 shape = SubResource("BoxShape3D_rxg2q")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(3.8465285, 0, 0, 0, 1.0000005, 0, 0, 0, 6.311805, -0.012291014, -0.49939835, 0.028294206)
+mesh = SubResource("BoxMesh_7dm0k")
