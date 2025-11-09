@@ -3,7 +3,7 @@ extends CharacterBody3D
 const SPEED = 5.0
 
 @onready
-var CAMERA = get_node("Camera3D")
+var CAMERA = $Camera3D
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
