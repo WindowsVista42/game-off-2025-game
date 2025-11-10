@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cynbprel43yk8"]
+
+[ext_resource type="PackedScene" uid="uid://rvg5huilaqb6" path="res://scenes/player.tscn" id="1_8cnto"]
+[ext_resource type="AudioStream" uid="uid://d4m64j5iqhpqg" path="res://sounds/temp.wav" id="1_milar"]
+
+[node name="PlaySound" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, -0.4499998)
+use_collision = true
+size = Vector3(6.3, 0.5, 8.2)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5938708, -6.2176647)
+stream = ExtResource("1_milar")
+volume_db = 12.94
+autoplay = true
+max_distance = 7.0
+
+[node name="Player" parent="." instance=ExtResource("1_8cnto")]
