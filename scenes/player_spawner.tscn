@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk8cmipx5taf3"]
+
+[ext_resource type="Script" uid="uid://dg5xpk1e702eo" path="res://scripts/respawn_if_fell_below_world.gd" id="1_hiofm"]
+[ext_resource type="PackedScene" uid="uid://rvg5huilaqb6" path="res://scenes/player.tscn" id="2_7m7wc"]
+
+[node name="PlayerSpawner" type="Node3D"]
+
+[node name="SpawnLocation" type="Node3D" parent="."]
+
+[node name="RespawnIfFellBelowWorld" type="Node3D" parent="SpawnLocation"]
+script = ExtResource("1_hiofm")
+
+[node name="Player" parent="." instance=ExtResource("2_7m7wc")]

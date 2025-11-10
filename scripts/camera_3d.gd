@@ -1,6 +1,7 @@
 extends Camera3D
 
-const MOUSE_SENS = 0.002
+@export
+var MOUSE_SENS = 0.002
 
 
 

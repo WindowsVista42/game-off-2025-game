@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://beibndaqaupuc"]
 
-[ext_resource type="Material" uid="uid://qeubjhq41c8m" path="res://materials/sheet metal 2.tres" id="1_eyi4x"]
+[ext_resource type="Material" uid="uid://qeubjhq41c8m" path="res://resources/materials/sheet metal 2.tres" id="1_eyi4x"]
 
 [node name="Shelf" type="CSGCombiner3D"]
 

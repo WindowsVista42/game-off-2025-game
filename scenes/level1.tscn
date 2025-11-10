@@ -1,13 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://dp8sdl4ps8xu2"]
+[gd_scene load_steps=10 format=3 uid="uid://dp8sdl4ps8xu2"]
 
-[ext_resource type="Material" uid="uid://ib3ge7vrata7" path="res://materials/road.tres" id="1_g2h75"]
-[ext_resource type="Material" uid="uid://660l7kfkene3" path="res://materials/wood (cabin).tres" id="1_ru4tf"]
-[ext_resource type="Material" uid="uid://b641hk5h2fmit" path="res://materials/grass.tres" id="1_wwpf4"]
-[ext_resource type="Material" uid="uid://lr3qf4bdj15y" path="res://materials/rock.tres" id="3_dwgg1"]
-[ext_resource type="Material" uid="uid://bkqjf6i0vw30b" path="res://materials/dirt.tres" id="3_m7ahb"]
+[ext_resource type="Material" uid="uid://ib3ge7vrata7" path="res://resources/materials/road.tres" id="1_g2h75"]
+[ext_resource type="Material" uid="uid://660l7kfkene3" path="res://resources/materials/wood (cabin).tres" id="1_ru4tf"]
+[ext_resource type="Material" uid="uid://b641hk5h2fmit" path="res://resources/materials/grass.tres" id="1_wwpf4"]
+[ext_resource type="CameraAttributesPractical" uid="uid://d0qvc00itnxwf" path="res://resources/camera_attributes/main_camera_attributes.tres" id="2_bbk5w"]
+[ext_resource type="Material" uid="uid://lr3qf4bdj15y" path="res://resources/materials/rock.tres" id="3_dwgg1"]
+[ext_resource type="Material" uid="uid://bkqjf6i0vw30b" path="res://resources/materials/dirt.tres" id="3_m7ahb"]
 [ext_resource type="PackedScene" uid="uid://cj84mtxk102yo" path="res://scenes/storehouse.tscn" id="6_6sh32"]
+[ext_resource type="Environment" uid="uid://jrfcngmi4ih2" path="res://resources/environments/main_environment.tres" id="7_ejswk"]
+
+[sub_resource type="FogMaterial" id="FogMaterial_6sh32"]
+density = 0.01
 
 [node name="Level 1" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("7_ejswk")
+camera_attributes = ExtResource("2_bbk5w")
 
 [node name="House" type="CSGCombiner3D" parent="."]
 transform = Transform3D(-4.371139e-08, 1, 7.1054274e-15, -1, -4.371139e-08, 1.7484555e-07, 1.7484555e-07, 0, 1, 0.014937639, 2.2369547, 7.8201294e-05)
@@ -1043,3 +1052,9 @@ material = ExtResource("3_dwgg1")
 
 [node name="Storehouse" parent="." instance=ExtResource("6_6sh32")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.341843, -6.007372, 82.98708)
+
+[node name="FogVolume" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 197.80191, 31.139053, 117.64701)
+size = Vector3(117, 27.043854, 204)
+shape = 2
+material = SubResource("FogMaterial_6sh32")

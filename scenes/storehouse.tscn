@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cj84mtxk102yo"]
 
-[ext_resource type="Material" uid="uid://uwqytjtcpq5x" path="res://materials/concrete.tres" id="1_swou6"]
-[ext_resource type="Material" uid="uid://dqwj8wip60bmf" path="res://materials/sheet metal.tres" id="2_5a6w1"]
+[ext_resource type="Material" uid="uid://uwqytjtcpq5x" path="res://resources/materials/concrete.tres" id="1_swou6"]
+[ext_resource type="Material" uid="uid://dqwj8wip60bmf" path="res://resources/materials/sheet metal.tres" id="2_5a6w1"]
 
 [node name="Storehouse" type="CSGCombiner3D"]
 use_collision = true
