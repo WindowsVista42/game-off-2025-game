@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dp8sdl4ps8xu2"]
+[gd_scene load_steps=6 format=3 uid="uid://dp8sdl4ps8xu2"]
 
 [ext_resource type="Material" uid="uid://ib3ge7vrata7" path="res://materials/road.tres" id="1_g2h75"]
+[ext_resource type="Material" uid="uid://660l7kfkene3" path="res://materials/wood (cabin).tres" id="1_ru4tf"]
 [ext_resource type="Material" uid="uid://b641hk5h2fmit" path="res://materials/grass.tres" id="1_wwpf4"]
+[ext_resource type="Material" uid="uid://lr3qf4bdj15y" path="res://materials/rock.tres" id="3_dwgg1"]
 [ext_resource type="Material" uid="uid://bkqjf6i0vw30b" path="res://materials/dirt.tres" id="3_m7ahb"]
 
 [node name="Level 1" type="Node3D"]
@@ -14,221 +16,262 @@ use_collision = true
 transform = Transform3D(1, 0, 0, 9.3947054e-23, 1, 0, 0, 0, 1, -0.5999999, -2.6226836e-08, 1.04907485e-07)
 use_collision = true
 size = Vector3(0.1, 6, 6)
+material = ExtResource("1_ru4tf")
 
 [node name="Wall2" type="CSGBox3D" parent="House"]
 transform = Transform3D(4.3711374e-08, -1, -1.7484555e-07, -1, -4.371139e-08, 8.742278e-08, -8.7422784e-08, 1.7484555e-07, -1, 0.85, -3, -8.877242e-07)
 use_collision = true
 size = Vector3(0.1, 3, 6)
+material = ExtResource("1_ru4tf")
 
 [node name="Wall4" type="CSGBox3D" parent="House"]
 transform = Transform3D(1.7484557e-07, -1, 4.371135e-08, -2.1855695e-07, -4.371139e-08, -1, 1, 1.7484555e-07, -2.1855696e-07, 0.8499994, 3.715467e-08, -3.0000005)
 use_collision = true
 size = Vector3(0.1, 3, 6)
+material = ExtResource("1_ru4tf")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="House/Wall4"]
 transform = Transform3D(1, 0, 0, 0, 1, -4.1372965e-29, 0, 0, 1, 0, -0.32640862, 0)
 operation = 2
 size = Vector3(1, 2.244629, 1.2)
+material = ExtResource("1_ru4tf")
 
 [node name="Wall3" type="CSGBox3D" parent="House"]
 transform = Transform3D(4.3711374e-08, -1, -1.7484555e-07, -1, -4.371139e-08, 8.742278e-08, -8.7422784e-08, 1.7484555e-07, -1, 0.84999967, 3, -4.1088683e-07)
 use_collision = true
 size = Vector3(0.1, 3, 6)
+material = ExtResource("1_ru4tf")
 
 [node name="Wall" type="CSGBox3D" parent="House"]
 transform = Transform3D(1.7484555e-07, -1, 4.371138e-08, -4.371139e-08, -4.371139e-08, -1, 1, 1.7484555e-07, -4.3711395e-08, 0.85000014, 3.7154674e-08, 2.9999995)
 use_collision = true
 size = Vector3(0.1, 3, 6)
+material = ExtResource("1_ru4tf")
 
-[node name="HillOutsideHouse" type="CSGCombiner3D" parent="."]
+[node name="Hillside2" type="CSGCombiner3D" parent="."]
 use_collision = true
 
-[node name="Ground" type="CSGBox3D" parent="HillOutsideHouse"]
+[node name="Ground" type="CSGBox3D" parent="Hillside2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2528212, 0)
 size = Vector3(19.970703, 0.50305176, 16.442383)
 material = ExtResource("1_g2h75")
 
-[node name="Ground" type="CSGBox3D" parent="HillOutsideHouse/Ground"]
+[node name="Ground" type="CSGBox3D" parent="Hillside2/Ground"]
 transform = Transform3D(1, 0, 0, 0, 0.9848077, -0.17364818, 0, 0.17364818, 0.9848077, 0, 1.3922942, -14.550322)
 size = Vector3(19.970703, 0.50305176, 16.442383)
 material = ExtResource("1_wwpf4")
 
-[node name="Ground2" type="CSGBox3D" parent="HillOutsideHouse/Ground/Ground"]
+[node name="Ground2" type="CSGBox3D" parent="Hillside2/Ground/Ground"]
 transform = Transform3D(1, 0, 0, 0, 0.9848078, -0.17364818, 0, 0.17364818, 0.9848078, 0, 1.3922949, -14.550323)
 size = Vector3(19.970703, 0.50305176, 16.442383)
 material = ExtResource("1_wwpf4")
 
-[node name="Ground" type="CSGBox3D" parent="HillOutsideHouse/Ground/Ground"]
+[node name="Ground" type="CSGBox3D" parent="Hillside2/Ground/Ground"]
 transform = Transform3D(1, 0, 0, 0, 0.9848077, -0.17364818, 0, 0.17364818, 0.9848077, 0, 1.3922942, -14.550322)
 size = Vector3(19.970703, 0.50305176, 16.442383)
 material = ExtResource("1_wwpf4")
 
-[node name="Ground2" type="CSGBox3D" parent="HillOutsideHouse/Ground"]
+[node name="Ground2" type="CSGBox3D" parent="Hillside2/Ground"]
 transform = Transform3D(0.64278764, 0, 0.76604444, 0, 1, 0, -0.76604444, 0, 0.64278764, 2.9040356, -0.2528212, 0)
 size = Vector3(19.970703, 0.50305176, 16.442383)
 material = ExtResource("1_wwpf4")
 
-[node name="Ground" type="CSGBox3D" parent="HillOutsideHouse/Ground/Ground2"]
+[node name="Ground" type="CSGBox3D" parent="Hillside2/Ground/Ground2"]
 transform = Transform3D(1, 0, 0, 0, 0.9848077, -0.17364818, 0, 0.17364818, 0.9848077, 0, 1.3922942, -14.550322)
 size = Vector3(19.970703, 0.50305176, 16.442383)
 material = ExtResource("1_wwpf4")
 
-[node name="Ground2" type="CSGBox3D" parent="HillOutsideHouse/Ground/Ground2/Ground"]
+[node name="Ground2" type="CSGBox3D" parent="Hillside2/Ground/Ground2/Ground"]
 transform = Transform3D(1, 0, 0, 0, 0.9848078, -0.17364818, 0, 0.17364818, 0.9848078, 0, 1.3922949, -14.550323)
 size = Vector3(19.970703, 0.50305176, 16.442383)
 material = ExtResource("1_wwpf4")
 
-[node name="Ground" type="CSGBox3D" parent="HillOutsideHouse/Ground/Ground2/Ground"]
+[node name="Ground" type="CSGBox3D" parent="Hillside2/Ground/Ground2/Ground"]
 transform = Transform3D(1, 0, 0, 0, 0.9848077, -0.17364818, 0, 0.17364818, 0.9848077, 0, 1.3922942, -14.550322)
 size = Vector3(19.970703, 0.50305176, 16.442383)
 material = ExtResource("1_wwpf4")
 
-[node name="Ground3" type="CSGBox3D" parent="HillOutsideHouse/Ground"]
+[node name="Ground3" type="CSGBox3D" parent="Hillside2/Ground"]
 transform = Transform3D(0.8660254, 0.25, 0.43301266, 0, 0.8660253, -0.5, -0.5, 0.4330127, 0.74999994, -10.355811, 6.4611216, -28.152878)
 size = Vector3(19.970703, 0.50305176, 16.442383)
 material = ExtResource("1_wwpf4")
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="HillOutsideHouse/Ground"]
+[node name="CSGBox3D4" type="CSGBox3D" parent="Hillside2/Ground"]
 transform = Transform3D(0.8750256, 0, 0.48407662, 0, 1, 0, -0.48407662, 0, 0.8750256, -17.518446, 5.882578, -30.948015)
 size = Vector3(36.678955, 2.2391357, 13.605713)
 material = ExtResource("1_wwpf4")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="HillOutsideHouse/Ground"]
+[node name="CSGBox3D3" type="CSGBox3D" parent="Hillside2/Ground"]
 transform = Transform3D(0.61925846, 0, 0.78518724, 0, 1, 0, -0.78518724, 0, 0.61925846, -20.97456, 5.414399, -30.73477)
 size = Vector3(36.678955, 2.2391357, 13.605713)
 material = ExtResource("1_wwpf4")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="HillOutsideHouse/Ground"]
+[node name="CSGBox3D2" type="CSGBox3D" parent="Hillside2/Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.294067, 5.7357244, -37.172363)
 size = Vector3(36.678955, 2.2391357, 13.605713)
 material = ExtResource("1_wwpf4")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="HillOutsideHouse/Ground"]
+[node name="CSGBox3D" type="CSGBox3D" parent="Hillside2/Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.126209, 0)
 operation = 2
 size = Vector3(158.27344, 6.4, 250.6)
 material = ExtResource("1_wwpf4")
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="HillOutsideHouse/Ground"]
+[node name="CSGBox3D7" type="CSGBox3D" parent="Hillside2/Ground"]
 transform = Transform3D(7.4505806e-08, 0, 1, 0, 1, 0, -1, 0, 7.4505806e-08, 2.4555397, 0, 12.497274)
 operation = 2
 size = Vector3(8.703003, 19.957031, 58.0791)
 material = ExtResource("1_wwpf4")
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="HillOutsideHouse/Ground"]
+[node name="CSGBox3D6" type="CSGBox3D" parent="Hillside2/Ground"]
 transform = Transform3D(0.64278764, 0, 0.76604444, 0, 1, 0, -0.76604444, 0, 0.64278764, -17.533182, 0, 1.5063438)
 operation = 2
 size = Vector3(8.703003, 19.957031, 58.0791)
 material = ExtResource("1_wwpf4")
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="HillOutsideHouse/Ground"]
+[node name="CSGBox3D5" type="CSGBox3D" parent="Hillside2/Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.293419, 0, -18.781387)
 operation = 2
 size = Vector3(8.703003, 19.957031, 58.0791)
 material = ExtResource("1_wwpf4")
 
-[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+[node name="Rocks2" type="CSGCombiner3D" parent="."]
 use_collision = true
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="CSGBox3D5" type="CSGBox3D" parent="Rocks2"]
 transform = Transform3D(-0.86602616, 0, 0.49999958, 0, 1, 0, -0.49999958, 0, -0.86602616, -26.239275, 4.854832, -11.169058)
 size = Vector3(7.5, 4.1, 4.4)
+material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="CSGBox3D7" type="CSGBox3D" parent="Rocks2"]
 transform = Transform3D(-0.9396927, 0, -0.34202093, 0, 1, 0, 0.34202093, 0, -0.9396927, -20.559467, 1.51493, 1.3267622)
 size = Vector3(7.5, 4.1, 4.4)
+material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="CSGBox3D8" type="CSGBox3D" parent="Rocks2"]
 transform = Transform3D(-0.98480785, 0, -0.17365065, 0, 1, 0, 0.17365065, 0, -0.98480785, -14.818796, 0.22702885, 13.527582)
 size = Vector3(7.5, 4.1, 4.4)
+material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="CSGBox3D6" type="CSGBox3D" parent="Rocks2"]
 transform = Transform3D(-0.5000013, 0, 0.86602515, 0, 1, 0, -0.86602515, 0, -0.5000013, -20.697561, 0.9920492, 10.021422)
 size = Vector3(7.5, 4.1, 4.4)
+material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="CSGBox3D4" type="CSGBox3D" parent="Rocks2"]
 transform = Transform3D(0.17364854, 0, -0.98480797, 0, 1, 0, 0.98480797, 0, 0.17364854, -19.28389, 4.1971893, -2.1050143)
 size = Vector3(7.5, 4.1, 4.4)
+material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="CSGBox3D3" type="CSGBox3D" parent="Rocks2"]
 transform = Transform3D(0.5000002, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.5000002, -23.604097, 3.1478922, -7.4715023)
 size = Vector3(7.5, 4.1, 4.4)
+material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="CSGBox3D2" type="CSGBox3D" parent="Rocks2"]
 transform = Transform3D(0.7660445, 0, -0.64278764, 0, 1, 0, 0.64278764, 0, 0.7660445, -18.990147, 2.0985951, -5.11384)
 size = Vector3(7.5, 4.1, 4.4)
+material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+[node name="CSGBox3D" type="CSGBox3D" parent="Rocks2"]
 transform = Transform3D(0.9396926, 0, -0.34202012, 0, 1, 0, 0.34202012, 0, 0.9396926, -13.707705, 1.049298, 0.44191736)
 size = Vector3(7.5, 4.1, 4.4)
+material = ExtResource("3_dwgg1")
 
-[node name="CSGCombiner3D2" type="CSGCombiner3D" parent="."]
+[node name="Roads" type="CSGCombiner3D" parent="."]
 use_collision = true
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D2"]
-transform = Transform3D(5.066395e-07, 0, 0.99999964, 0, 1, 0, -0.99999964, 0, 5.066395e-07, 101.45958, -0.35325062, 78.21149)
-size = Vector3(22, 0.5, 18.300001)
+[node name="CSGBox3D4" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(-0.99999964, 0, 4.629281e-07, 0, 1, 0, -4.629281e-07, 0, -0.99999964, 184.88106, 18.586544, 112.099045)
+size = Vector3(22, 2.4204102, 18.300001)
 material = ExtResource("1_g2h75")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D2"]
-transform = Transform3D(-2.9802322e-08, 0, 1, 0, 1, 0, -1, 0, -2.9802322e-08, 91.2021, -0.30000195, 78.11785)
-size = Vector3(22, 0.5, 6.7000003)
+[node name="CSGBox3D3" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(-1, 0, -7.351371e-08, 0, 1, 0, 7.351371e-08, 0, -1, 184.78741, 18.609032, 122.35652)
+size = Vector3(22, 2.4819336, 6.7000003)
 material = ExtResource("1_g2h75")
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="CSGCombiner3D2"]
-transform = Transform3D(0.34201992, 0, -0.93969214, 0, 1, 0, 0.93969214, 0, 0.34201992, 87.78231, -0.3, 58.25869)
-size = Vector3(22, 0.5, 6.7000003)
+[node name="CSGBox3D8" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(0.34201992, 0, -0.93969214, 0, 1, 0, 0.93969214, 0, 0.34201992, 87.78231, -0.7606934, 58.25869)
+size = Vector3(22, 1.4213867, 6.7000003)
 material = ExtResource("1_g2h75")
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D2"]
-transform = Transform3D(0.99999976, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 0.99999976, 76.341156, -0.3, 49.979347)
-size = Vector3(22, 0.5, 6.7000003)
+[node name="CSGBox3D12" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(0.32139358, -0.11697776, -0.93969214, 0.34201995, 0.9396926, 0, 0.8830218, -0.3213938, 0.34201992, 94.838036, 2.9801078, 77.69492)
+size = Vector3(22, 1.590332, 6.7000003)
 material = ExtResource("1_g2h75")
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="CSGCombiner3D2"]
-transform = Transform3D(-0.9299263, -0.17845757, -0.32154176, -0.1629466, 0.98379844, -0.07475753, 0.32967338, -0.017124698, -0.94393915, 44.810795, -3.58713, 64.63018)
-size = Vector3(22, 0.5, 6.7000003)
+[node name="CSGBox3D13" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(0.33682385, -0.05939116, -0.93969214, 0.17364806, 0.9848077, 0, 0.9254161, -0.1631759, 0.34201995, 102.02472, 8.74489, 97.44016)
+size = Vector3(22, 1.3193359, 6.7000003)
 material = ExtResource("1_g2h75")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D2/CSGBox3D10"]
+[node name="CSGBox3D14" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(0.7660439, 1.1292286e-08, -0.6427872, -1.5265137e-08, 0.9999999, -9.6711865e-09, 0.6427872, 1.4901161e-08, 0.766044, 112.524864, 10.632868, 112.657104)
+size = Vector3(22, 1.3833008, 6.7000003)
+material = ExtResource("1_g2h75")
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(0.33682385, -0.05939116, -0.93969214, 0.17364806, 0.9848077, 0, 0.9254161, -0.1631759, 0.34201995, 102.10591, 10.081249, 96.40345)
+operation = 2
+size = Vector3(27.6, 1.9158936, 10.722241)
+material = ExtResource("1_g2h75")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(0.99999976, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 0.99999976, 76.341156, -0.86445314, 49.979347)
+size = Vector3(22, 1.6289063, 6.7000003)
+material = ExtResource("1_g2h75")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(-0.9299263, -0.17845757, -0.32154176, -0.1629466, 0.98379844, -0.07475753, 0.32967338, -0.017124698, -0.94393915, 44.9344, -4.2685356, 64.642044)
+size = Vector3(22, 1.8852539, 6.7000003)
+material = ExtResource("1_g2h75")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Roads/CSGBox3D10"]
 transform = Transform3D(0.7660448, -3.1403033e-07, 0.6427876, 1.1175871e-08, 1.0000519, 1.1175871e-08, -0.6427879, 3.1432137e-09, 0.76604474, -10.22665, -0.70844555, -1.648529)
 operation = 2
 size = Vector3(17.95874, 4.8272095, 7.4300537)
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="CSGCombiner3D2"]
-transform = Transform3D(-0.49240398, -0.08682419, -0.86602503, -0.17364809, 0.98480767, -2.9802322e-08, 0.85286814, 0.15038374, -0.50000006, 50.0672, -2.205826, 57.06666)
-size = Vector3(22, 0.5, 6.7000003)
+[node name="CSGBox3D9" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(-0.49240398, -0.08682419, -0.86602503, -0.17364809, 0.98480767, -2.9802322e-08, 0.85286814, 0.15038374, -0.50000006, 50.130325, -2.9218311, 56.957325)
+size = Vector3(22, 1.9541016, 6.7000003)
 material = ExtResource("1_g2h75")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D2/CSGBox3D9"]
-transform = Transform3D(0.9984451, 0.05575168, 8.046627e-07, -0.055751782, 0.9984447, -4.6044584e-06, -1.9751468e-07, -1.6378191e-08, 1, 7.27221, 0.4887874, 0.6563034)
+[node name="CSGBox3D" type="CSGBox3D" parent="Roads/CSGBox3D9"]
+transform = Transform3D(0.9984451, 0.05575168, 9.834766e-07, -0.055751786, 0.9984447, -5.6400895e-06, -2.0861626e-07, -2.9802322e-08, 1, 1.0957066, 2.2093978, 0.65630335)
 operation = 2
-size = Vector3(15.946777, 1.2959595, 9.233032)
+size = Vector3(28.472412, 1.2959595, 9.233032)
 material = ExtResource("1_g2h75")
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D2"]
-transform = Transform3D(-0.8660253, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, -0.8660253, 57.49389, -0.3, 45.02227)
-size = Vector3(22, 0.5, 6.7000003)
+[node name="CSGBox3D2" type="CSGBox3D" parent="Roads/CSGBox3D9"]
+transform = Transform3D(0.49922282, 0.05575168, -0.86467814, -0.027876686, 0.9984447, 0.048276693, 0.86602634, -2.9802322e-08, 0.5000011, 3.626236, 1.4395819, -0.1868515)
+operation = 2
+size = Vector3(28.472412, 1.2959595, 14.808044)
 material = ExtResource("1_g2h75")
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D2"]
-transform = Transform3D(0.5, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, 0.5, 43.825, -0.3, 31.192)
-size = Vector3(22, 0.5, 6.7000003)
+[node name="CSGBox3D6" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(-0.8660253, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, -0.8660253, 57.49389, -1.2196777, 45.02227)
+size = Vector3(22, 2.3393555, 6.7000003)
 material = ExtResource("1_g2h75")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D2"]
-transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 30.2, -0.3, 17.199999)
-size = Vector3(22, 0.5, 6.7000003)
+[node name="CSGBox3D5" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(0.5, 0, -0.8660254, 0, 1, 0, 0.8660254, 0, 0.5, 43.825, -0.99384767, 31.192)
+size = Vector3(22, 1.8876953, 6.7000003)
 material = ExtResource("1_g2h75")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, -0.3, 11.4)
-size = Vector3(25.2, 0.5, 6.7000003)
+[node name="CSGBox3D2" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(0.8660254, 0, -0.5, 0, 1, 0, 0.5, 0, 0.8660254, 30.2, -1.0128906, 17.199999)
+size = Vector3(22, 1.9257813, 6.7000003)
 material = ExtResource("1_g2h75")
 
-[node name="CSGBox3D11" type="CSGBox3D" parent="CSGCombiner3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.44412, -5.062045, 66.79052)
-size = Vector3(51.100002, 0.5, 30.9)
+[node name="CSGBox3D" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, -1.3742187, 11.4)
+size = Vector3(25.2, 2.6484375, 6.7000003)
+material = ExtResource("1_g2h75")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Roads"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.44412, -6.218295, 66.79052)
+size = Vector3(51.100002, 2.8125, 30.9)
 material = ExtResource("1_g2h75")
 
 [node name="Rocks" type="CSGCombiner3D" parent="."]
@@ -237,30 +280,132 @@ use_collision = true
 [node name="CSGBox3D16" type="CSGBox3D" parent="Rocks"]
 transform = Transform3D(0.8855477, 0, 0.4645484, 0, 1, 0, -0.4645484, 0, 0.8855477, 7.6391726, -3.6395483, 44.30221)
 size = Vector3(4.357666, 3.7021484, 3.5854492)
+material = ExtResource("3_dwgg1")
 
 [node name="CSGBox3D19" type="CSGBox3D" parent="Rocks"]
 transform = Transform3D(0.89782023, 0, -0.44036236, 0, 1, 0, 0.44036236, 0, 0.89782023, 11.373212, -4.4964, 44.45842)
 size = Vector3(4.357666, 3.7021484, 4.0855713)
+material = ExtResource("3_dwgg1")
 
 [node name="CSGBox3D22" type="CSGBox3D" parent="Rocks"]
 transform = Transform3D(0.3726315, 0, -0.92797947, 0, 1, 0, 0.92797947, 0, 0.3726315, 13.230923, -5.2981577, 46.99669)
 size = Vector3(2.8642578, 2.0986328, 2.1672974)
+material = ExtResource("3_dwgg1")
 
 [node name="CSGBox3D20" type="CSGBox3D" parent="Rocks"]
 transform = Transform3D(0.15333077, 0, -0.9881749, 0, 1, 0, 0.9881749, 0, 0.15333077, 13.271357, -1.7527406, 43.008816)
 size = Vector3(5.4327393, 3.7021484, 4.0855713)
+material = ExtResource("3_dwgg1")
 
 [node name="CSGBox3D21" type="CSGBox3D" parent="Rocks"]
 transform = Transform3D(-0.14680819, 0, -0.989165, 0, 1, 0, 0.989165, 0, -0.14680819, 14.915063, 0.07081008, 40.811077)
 size = Vector3(5.8565063, 3.2226563, 4.181549)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D25" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(-0.5358561, 0, 0.8443092, 0, 1, 0, -0.8443092, 0, -0.5358561, 17.339823, -0.37676072, 39.7571)
+size = Vector3(3.9961243, 2.5878906, 2.6669464)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D26" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(0.36430803, 0, 0.9312784, 0, 1, 0, -0.9312784, 0, 0.36430803, 19.659134, -0.061012268, 41.48358)
+size = Vector3(3.9961243, 2.5878906, 2.6669464)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D27" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(0.94997764, 0, 0.31231827, 0, 1, 0, -0.31231827, 0, 0.94997764, 19.93359, -0.7246728, 44.03254)
+size = Vector3(3.9961243, 2.5878906, 2.6669464)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D34" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(0.7530124, 0, -0.6580065, 0, 1, 0, 0.6580065, 0, 0.7530124, 17.790525, -2.7724066, 44.368427)
+size = Vector3(3.9961243, 2.5878906, 2.6669464)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D28" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(0.7000872, 0, -0.71405756, 0, 1, 0, 0.71405756, 0, 0.7000872, 22.68393, -1.8488164, 44.492992)
+size = Vector3(3.9961243, 2.9492188, 2.6669464)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D38" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(0.50671095, 0, -0.86211616, 0, 1, 0, 0.86211616, 0, 0.50671095, 23.173843, -4.225571, 45.26035)
+size = Vector3(3.9961243, 4.222168, 2.6669464)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D29" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(0.9997637, 0, -0.021745116, 0, 1, 0, 0.021745116, 0, 0.9997637, 21.523092, -0.4050498, 43.102562)
+size = Vector3(3.2733307, 2.5878906, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D30" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(0.83432883, 0, -0.5512674, 0, 1, 0, 0.5512674, 0, 0.83432883, 16.695969, -0.94193435, 43.1608)
+size = Vector3(3.2733307, 2.5878906, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D31" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(-0.3846176, 0, -0.9230762, 0, 1, 0, 0.9230762, 0, -0.3846176, 14.950988, -4.0461235, 45.30768)
+size = Vector3(3.2733307, 4.5321045, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D32" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(-0.8414638, 0, -0.5403139, 0, 1, 0, 0.5403139, 0, -0.8414638, 17.722778, -5.5088563, 44.968212)
+size = Vector3(3.2733307, 4.5321045, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D33" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(-0.8414638, 0, -0.5403139, 0, 1, 0, 0.5403139, 0, -0.8414638, 20.52878, -4.272744, 45.030804)
+size = Vector3(3.2733307, 6.8861694, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D35" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(-0.08498213, 0, -0.9963827, 0, 1, 0, 0.9963827, 0, -0.08498213, 25.713774, -4.2727447, 44.941704)
+size = Vector3(3.2733307, 6.8861694, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D36" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(-0.86243427, 0, -0.50616944, 0, 1, 0, 0.50616944, 0, -0.86243427, 28.75699, -4.9864798, 46.371475)
+size = Vector3(3.2733307, 6.8861694, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D37" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(-0.9086032, 0, 0.4176609, 0, 1, 0, -0.4176609, 0, -0.9086032, 31.458138, -3.554769, 45.292664)
+size = Vector3(3.2733307, 9.932831, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D39" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(-0.13536993, 0, 0.9907954, 0, 1, 0, -0.9907954, 0, -0.13536993, 28.872171, -0.9103286, 44.819035)
+size = Vector3(1.6737747, 2.940853, 4.5519295)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D40" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(0.66998625, 0, 0.7423739, 0, 1, 0, -0.7423739, 0, 0.66998625, 23.59328, -1.003489, 43.766506)
+size = Vector3(1.6737747, 2.940853, 2.3291874)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D41" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(0.9619471, 0, -0.2732373, 0, 1, 0, 0.2732373, 0, 0.9619471, 25.754383, -0.5379236, 44.05864)
+size = Vector3(2.4903297, 2.940853, 2.3291874)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D23" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(-0.8841654, 0, -0.46717376, 0, 1, 0, 0.46717376, 0, -0.8841654, 14.854689, 0.39958596, 36.50749)
+size = Vector3(5.8565063, 3.2226563, 4.181549)
+material = ExtResource("3_dwgg1")
 
 [node name="CSGBox3D17" type="CSGBox3D" parent="Rocks"]
 transform = Transform3D(0.17149928, 0, 0.9851843, 0, 1, 0, -0.9851843, 0, 0.17149928, 10.964455, -2.3840442, 41.219807)
 size = Vector3(4.357666, 3.7021484, 3.5854492)
+material = ExtResource("3_dwgg1")
 
 [node name="CSGBox3D18" type="CSGBox3D" parent="Rocks"]
 transform = Transform3D(0.69036496, 0, 0.7234614, 0, 1, 0, -0.7234614, 0, 0.69036496, 13.082036, -1.0185752, 38.917236)
 size = Vector3(4.357666, 3.7021484, 3.5854492)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D24" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(0.95775735, 0, -0.28757787, 0, 1, 0, 0.28757787, 0, 0.95775735, 13.037601, -1.8737504, 37.02168)
+size = Vector3(4.357666, 3.7021484, 3.5854492)
+material = ExtResource("3_dwgg1")
 
 [node name="Hillside" type="CSGCombiner3D" parent="."]
 use_collision = true
@@ -268,6 +413,21 @@ use_collision = true
 [node name="CSGBox3D3" type="CSGBox3D" parent="Hillside"]
 transform = Transform3D(0.7244041, -0.47851208, -0.4962522, 0.38696873, 0.87799954, -0.28173503, 0.57052183, 0.012055625, 0.82119465, 8.563742, -3.1638246, 36.42356)
 size = Vector3(9.151245, 0.36523438, 15.3203125)
+material = ExtResource("1_wwpf4")
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="Hillside"]
+transform = Transform3D(-0.95108074, -0.024488043, -0.30797192, -0.02707727, 0.9996258, 0.0041364357, 0.3077554, 0.012273714, -0.9513872, 20.84575, 0.053453777, 35.188602)
+size = Vector3(10.340271, 0.36523438, 31.7323)
+material = ExtResource("1_wwpf4")
+
+[node name="CSGBox3D23" type="CSGBox3D" parent="Hillside"]
+transform = Transform3D(-0.69794476, -0.021868141, 0.7158188, -0.02707727, 0.99962586, 0.0041364357, -0.7156402, -0.016495224, -0.69827485, 11.527387, 0.085132524, 21.681623)
+size = Vector3(7.4717865, 0.36523438, 6.087509)
+material = ExtResource("1_wwpf4")
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="Hillside"]
+transform = Transform3D(-0.95108074, -0.024488043, -0.30797192, -0.02707727, 0.9996258, 0.0041364357, 0.3077554, 0.012273714, -0.9513872, 25.079155, -1.7730616, 36.42248)
+size = Vector3(18.033417, 3.831787, 26.768066)
 material = ExtResource("1_wwpf4")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="Hillside"]
@@ -332,9 +492,9 @@ size = Vector3(25.145996, 2.777832, 8.060135)
 material = ExtResource("1_wwpf4")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Hillside"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.384352, 5.45508, 28.59183)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.384352, 5.45508, 33.75467)
 operation = 2
-size = Vector3(75.812164, 10.794434, 34.213867)
+size = Vector3(75.812164, 10.794434, 44.53955)
 material = ExtResource("1_wwpf4")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Hillside"]
@@ -367,4 +527,27 @@ material = ExtResource("1_wwpf4")
 transform = Transform3D(1, 0, 0, 0, 0.99034566, 0.13862, 0, -0.13862, 0.99034566, -0.55975723, 5.7573805, 17.33768)
 operation = 2
 size = Vector3(50.483704, 10.794434, 34.213867)
+material = ExtResource("1_wwpf4")
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Hillside"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.202633, -1.95, 49.648106)
+operation = 2
+size = Vector3(22, 4.9, 7.5)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="Hillside"]
+transform = Transform3D(0.7823799, 0, -0.6228014, 0, 1, 0, 0.6228014, 0, 0.7823799, 16.7785, -1.95, 44.393024)
+operation = 2
+size = Vector3(9.358276, 4.9, 7.5)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="Hillside"]
+transform = Transform3D(0.9462718, 0, -0.32337245, 0, 1, 0, 0.32337245, 0, 0.9462718, 23.92058, -1.9500005, 48.202286)
+operation = 2
+size = Vector3(9.358276, 4.9, 7.5)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D21" type="CSGBox3D" parent="Hillside"]
+transform = Transform3D(0.99941593, -0.0032167975, 0.03401506, 9.9312514e-05, 0.9958279, 0.09125688, -0.034166735, -0.09120036, 0.9952464, 21.245676, -5.8478923, 44.670258)
+size = Vector3(18.865475, 0.36523438, 14.248749)
 material = ExtResource("1_wwpf4")
