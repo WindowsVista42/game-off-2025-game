@@ -15,4 +15,4 @@ environment = ExtResource("1_sugp2")
 [node name="Level 1" parent="." instance=ExtResource("1_0wfyh")]
 
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.103242, -9.536743e-07, 18.59445)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.376535, -3.1163397, 82.691444)
