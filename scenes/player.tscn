@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://bh6tmdb26jcdc" path="res://scripts/character_body_3d.gd" id="1_g2els"]
 [ext_resource type="Script" uid="uid://l2g6f5m8d1oe" path="res://scripts/camera_3d.gd" id="2_qhqgy"]
 
-[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_g2els"]
-length = 0.16933972
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g2els"]
 radius = 0.24951172
 height = 1.5224609
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_g2els"]
+length = 0.16933972
 
 [node name="Player" type="CharacterBody3D"]
 axis_lock_angular_x = true
@@ -16,16 +16,16 @@ axis_lock_angular_y = true
 axis_lock_angular_z = true
 script = ExtResource("1_g2els")
 
-[node name="FloorCollider" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.07319754, 0)
-shape = SubResource("SeparationRayShape3D_g2els")
-
 [node name="BodyCollider" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83391666, 0)
 shape = SubResource("CapsuleShape3D_g2els")
 
+[node name="FloorCollider" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.07319754, 0)
+shape = SubResource("SeparationRayShape3D_g2els")
+
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5645641, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5645642, 0)
 script = ExtResource("2_qhqgy")
 
 [node name="AudioListener3D" type="AudioListener3D" parent="."]
