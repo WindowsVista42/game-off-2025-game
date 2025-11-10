@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://beibndaqaupuc"]
+
+[ext_resource type="Material" uid="uid://qeubjhq41c8m" path="res://resources/materials/sheet metal 2.tres" id="1_eyi4x"]
+
+[node name="Shelf" type="CSGCombiner3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.6360639, -0.4)
+size = Vector3(0.05, 3.3, 0.05)
+material = ExtResource("1_eyi4x")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.6360639, 0.4)
+size = Vector3(0.05, 3.3, 0.05)
+material = ExtResource("1_eyi4x")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.6360639, -0.4)
+size = Vector3(0.05, 3.3, 0.05)
+material = ExtResource("1_eyi4x")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.6360639, 0.4)
+size = Vector3(0.05, 3.3, 0.05)
+material = ExtResource("1_eyi4x")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39012814, 0)
+size = Vector3(2.2, 0.1, 1)
+material = ExtResource("1_eyi4x")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0901281, 0)
+size = Vector3(2.2, 0.1, 1)
+material = ExtResource("1_eyi4x")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7901281, 0)
+size = Vector3(2.2, 0.1, 1)
+material = ExtResource("1_eyi4x")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.490128, 0)
+size = Vector3(2.2, 0.1, 1)
+material = ExtResource("1_eyi4x")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.190128, 0)
+size = Vector3(2.2, 0.1, 1)
+material = ExtResource("1_eyi4x")
