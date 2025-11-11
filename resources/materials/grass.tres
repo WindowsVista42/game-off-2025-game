@@ -1,6 +1,22 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://b641hk5h2fmit"]
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://b641hk5h2fmit"]
+
+[ext_resource type="Texture2D" uid="uid://c88iuf26hgrli" path="res://resources/textures/smooth+grass.jpg" id="1_e13ny"]
+[ext_resource type="Texture2D" uid="uid://cic7sd3ovfi5d" path="res://resources/textures/0082-green-grass-texture-seamless.jpg" id="2_au8fv"]
+[ext_resource type="Texture2D" uid="uid://bpnjyqm61o320" path="res://resources/textures/rock1.png" id="2_b71v3"]
 
 [resource]
 diffuse_mode = 1
 specular_mode = 2
-albedo_color = Color(0.19353095, 0.31991667, 0.17866841, 1)
+albedo_color = Color(0.65056, 0.76, 0.6384, 1)
+albedo_texture = ExtResource("1_e13ny")
+roughness_texture_channel = 1
+heightmap_scale = 5.95
+detail_enabled = true
+detail_mask = ExtResource("2_b71v3")
+detail_blend_mode = 3
+detail_uv_layer = 1
+detail_albedo = ExtResource("2_au8fv")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+uv2_scale = Vector3(0, 0, 0)
+uv2_triplanar = true

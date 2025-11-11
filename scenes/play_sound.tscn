@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cynbprel43yk8"]
 
 [ext_resource type="PackedScene" uid="uid://rvg5huilaqb6" path="res://scenes/player.tscn" id="1_8cnto"]
-[ext_resource type="AudioStream" uid="uid://d4m64j5iqhpqg" path="res://sounds/temp.wav" id="1_milar"]
+[ext_resource type="AudioStream" uid="uid://d4m64j5iqhpqg" path="res://resources/sounds/temp.wav" id="1_milar"]
 
 [node name="PlaySound" type="Node3D"]
 

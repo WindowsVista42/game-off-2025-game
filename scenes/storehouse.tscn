@@ -10,38 +10,38 @@ use_collision = true
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="Wall" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.0555935, 13)
-size = Vector3(46, 10, 0.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.0555935, 12.85)
+size = Vector3(46, 10, 0.5)
 material = ExtResource("2_5a6w1")
 
 [node name="Wall3" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -23, 7.5555935, 0)
-size = Vector3(26, 13, 0.2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -22.85, 7.5555935, 6.5567085e-09)
+size = Vector3(26, 13, 0.5)
 material = ExtResource("2_5a6w1")
 
 [node name="Wall4" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 23, 7.556, 0)
-size = Vector3(26, 13, 0.2)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 22.8, 7.556, -8.742278e-09)
+size = Vector3(26, 13, 0.6)
 material = ExtResource("2_5a6w1")
 
 [node name="Wall2" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.0555935, -13)
-size = Vector3(46, 10, 0.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.0555935, -12.75)
+size = Vector3(46, 10, 0.7)
 material = ExtResource("2_5a6w1")
 
 [node name="Roof" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 0.34202015, 0.9396926, 0, -0.9396926, 0.34202015, 0, 12.068624, 8.590461)
-size = Vector3(48, 12, 0.2)
+transform = Transform3D(1, 0, 0, 0, 0.34202015, 0.9396926, 0, -0.9396926, 0.34202015, 0, 11.8337, 8.504955)
+size = Vector3(48, 12, 0.7)
 material = ExtResource("2_5a6w1")
 
 [node name="Roof2" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, -0.3420201, 0.93969256, 0, -0.93969256, -0.3420201, 0, 12.069, -8.59)
-size = Vector3(48, 12, 0.2)
+transform = Transform3D(1, 0, 0, 0, -0.3420201, 0.93969256, 0, -0.93969256, -0.3420201, 0, 11.834077, -8.504495)
+size = Vector3(48, 12, 0.7)
 material = ExtResource("2_5a6w1")
 
 [node name="Roof3" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, -4.3711392e-08, 1.0000001, 0, -1.0000001, -4.3711392e-08, 0, 14.008907, -0.0899992)
-size = Vector3(48, 7, 0.2)
+transform = Transform3D(1, 0, 0, 0, -4.3711392e-08, 1.0000001, 0, -1.0000001, -4.3711392e-08, 0, 13.8089075, -0.08999919)
+size = Vector3(48, 7, 0.6)
 material = ExtResource("2_5a6w1")
 
 [node name="RoofCutout" type="CSGBox3D" parent="CSGCombiner3D"]
@@ -66,6 +66,3 @@ material = ExtResource("2_5a6w1")
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 size = Vector3(48.57788, 2.8125, 28.236084)
 material = ExtResource("1_swou6")
-
-[node name="Shelfs" type="CSGCombiner3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.7)

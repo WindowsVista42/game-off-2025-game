@@ -1,6 +1,12 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://dqwj8wip60bmf"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dqwj8wip60bmf"]
+
+[ext_resource type="Texture2D" uid="uid://cxl8j8p6f1kqy" path="res://resources/textures/0086-dirty-rusted-corrugated-metal-texture-seamless.jpg" id="1_2g3f3"]
 
 [resource]
 diffuse_mode = 1
-albedo_color = Color(0.42006728, 0.36148292, 0.35285756, 1)
+albedo_color = Color(0.736, 0.83106667, 0.92, 1)
+albedo_texture = ExtResource("1_2g3f3")
+metallic = 1.0
 roughness = 0.65
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dp8sdl4ps8xu2"]
+[gd_scene load_steps=21 format=3 uid="uid://dp8sdl4ps8xu2"]
 
 [ext_resource type="Material" uid="uid://ib3ge7vrata7" path="res://resources/materials/road.tres" id="1_g2h75"]
 [ext_resource type="Material" uid="uid://660l7kfkene3" path="res://resources/materials/wood (cabin).tres" id="1_ru4tf"]
@@ -8,11 +8,60 @@
 [ext_resource type="Material" uid="uid://bkqjf6i0vw30b" path="res://resources/materials/dirt.tres" id="3_m7ahb"]
 [ext_resource type="PackedScene" uid="uid://cj84mtxk102yo" path="res://scenes/storehouse.tscn" id="6_6sh32"]
 [ext_resource type="Environment" uid="uid://jrfcngmi4ih2" path="res://resources/environments/main_environment.tres" id="7_ejswk"]
+[ext_resource type="Material" uid="uid://bf4ddhn4qow5t" path="res://resources/materials/foil.tres" id="9_conm7"]
+
+[sub_resource type="Gradient" id="Gradient_conm7"]
+offsets = PackedFloat32Array(0.41416892, 0.8828338)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_d3jkd"]
+seed = 245
+frequency = 0.0248
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_u3awl"]
+noise = SubResource("FastNoiseLite_d3jkd")
+color_ramp = SubResource("Gradient_conm7")
 
 [sub_resource type="FogMaterial" id="FogMaterial_6sh32"]
 density = 0.01
+density_texture = SubResource("NoiseTexture3D_u3awl")
+
+[sub_resource type="Gradient" id="Gradient_bbk5w"]
+offsets = PackedFloat32Array(0.6648501, 0.907357)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_conm7"]
+seed = 10
+frequency = 0.0763
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_d3jkd"]
+noise = SubResource("FastNoiseLite_conm7")
+color_ramp = SubResource("Gradient_bbk5w")
+
+[sub_resource type="FogMaterial" id="FogMaterial_u3awl"]
+density = 0.1066
+density_texture = SubResource("NoiseTexture3D_d3jkd")
+
+[sub_resource type="FogMaterial" id="FogMaterial_bbk5w"]
+density = 0.1093
+density_texture = SubResource("NoiseTexture3D_d3jkd")
+
+[sub_resource type="FogMaterial" id="FogMaterial_conm7"]
+density = 0.1066
+density_texture = SubResource("NoiseTexture3D_d3jkd")
+
+[sub_resource type="FogMaterial" id="FogMaterial_d3jkd"]
+density = -0.8206
 
 [node name="Level 1" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.31232667, -0.49153516, 0.8129239, -0.31512794, 0.8608856, 0.3994626, -0.89618444, -0.1314122, -0.42377397, 0, 0, 0)
+light_color = Color(0.9999998, 0.9712381, 0.91382796, 1)
+light_volumetric_fog_energy = 0.8
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.7
+directional_shadow_blend_splits = true
+directional_shadow_max_distance = 150.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("7_ejswk")
@@ -896,7 +945,7 @@ material = ExtResource("3_m7ahb")
 transform = Transform3D(0.9832302, 0.057362527, 0.17311105, 0.0716563, 0.75137883, -0.6559692, -0.16769998, 0.6573738, 0.73466766, -25.780396, 1.7386045, 41.07433)
 operation = 2
 size = Vector3(23.486511, 5.9804077, 6.7857223)
-material = ExtResource("1_wwpf4")
+material = ExtResource("3_m7ahb")
 
 [node name="Forest" type="CSGCombiner3D" parent="."]
 visible = false
@@ -1051,10 +1100,50 @@ size = Vector3(27.1124, 39.150673, 20.662918)
 material = ExtResource("3_dwgg1")
 
 [node name="Storehouse" parent="." instance=ExtResource("6_6sh32")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.341843, -6.007372, 82.98708)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.341843, -5.628532, 82.98708)
 
 [node name="FogVolume" type="FogVolume" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 197.80191, 31.139053, 117.64701)
 size = Vector3(117, 27.043854, 204)
 shape = 2
 material = SubResource("FogMaterial_6sh32")
+
+[node name="FogVolume5" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 197.80191, 31.139053, 117.64701)
+size = Vector3(117, 27.043854, 204)
+shape = 2
+material = SubResource("FogMaterial_6sh32")
+
+[node name="FogVolume2" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.347916, 4.1943827, 45.996445)
+size = Vector3(265.85168, 30.938324, 261.20886)
+shape = 0
+material = SubResource("FogMaterial_u3awl")
+
+[node name="FogVolume3" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.347916, 4.1943827, 45.996445)
+size = Vector3(265.85168, 30.938324, 261.20886)
+shape = 0
+material = SubResource("FogMaterial_bbk5w")
+
+[node name="FogVolume4" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45.347916, 4.1943827, 45.996445)
+size = Vector3(265.85168, 30.938324, 261.20886)
+shape = 0
+material = SubResource("FogMaterial_conm7")
+
+[node name="FogVolume6" type="FogVolume" parent="."]
+size = Vector3(9.84668, 7.979492, 8.675781)
+material = SubResource("FogMaterial_d3jkd")
+
+[node name="FogVolume7" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.476864, -1.9680481, 82.3303)
+size = Vector3(26.534851, 7.241028, 16.010742)
+material = SubResource("FogMaterial_d3jkd")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8712127, -3.4903839, 46.07022)
+radius = 0.9905714
+radial_segments = 16
+rings = 12
+material = ExtResource("9_conm7")

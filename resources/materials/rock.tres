@@ -1,7 +1,17 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://lr3qf4bdj15y"]
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://lr3qf4bdj15y"]
+
+[ext_resource type="Texture2D" uid="uid://c2m48pmef1h4i" path="res://resources/textures/0090-rock-stone-texture-seamless-hr.jpg" id="1_d8f8l"]
+[ext_resource type="Texture2D" uid="uid://bpnjyqm61o320" path="res://resources/textures/rock1.png" id="2_38w4b"]
 
 [resource]
 diffuse_mode = 1
 specular_mode = 2
-albedo_color = Color(0.41489643, 0.39051485, 0.39050904, 1)
-roughness = 0.65
+albedo_color = Color(0.54102945, 0.5141234, 0.5142016, 1)
+albedo_texture = ExtResource("1_d8f8l")
+roughness_texture = ExtResource("2_38w4b")
+roughness_texture_channel = 4
+uv1_scale = Vector3(0.05, 0.05, 0.05)
+uv1_triplanar = true
+grow_amount = 0.755
+stencil_flags = 2
+stencil_color = Color(0.2459839, 0.24598393, 0.24598393, 1)
