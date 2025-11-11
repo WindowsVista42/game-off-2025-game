@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://bf4ddhn4qow5t"]
+
+[ext_resource type="Shader" uid="uid://p38s2rboql0n" path="res://resources/shaders/foil.gdshader" id="1_oly1m"]
+[ext_resource type="Texture2D" uid="uid://b70ecgjbe45a1" path="res://resources/textures/111-concrete-bare-clean-texture-seamless.jpg" id="2_wsh0n"]
+[ext_resource type="Texture2D" uid="uid://dswh71t4keesf" path="res://resources/textures/foil/foil_uv_tex.tres" id="3_8v767"]
+[ext_resource type="Gradient" uid="uid://lo7utc2vmmo0" path="res://resources/textures/foil/rainbow_gradient.tres" id="4_pffa7"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dohug"]
+gradient = ExtResource("4_pffa7")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_oly1m")
+shader_parameter/rainbow_noise = SubResource("GradientTexture1D_dohug")
+shader_parameter/noise_uv_tex = ExtResource("3_8v767")
+shader_parameter/base_color_tex = ExtResource("2_wsh0n")

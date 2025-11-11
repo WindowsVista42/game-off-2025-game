@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dtimsqvmqhkne"]
+
+[ext_resource type="Texture2D" uid="uid://c2m48pmef1h4i" path="res://resources/textures/0090-rock-stone-texture-seamless-hr.jpg" id="1_vjfx7"]
+
+[resource]
+diffuse_mode = 1
+specular_mode = 2
+albedo_color = Color(0.48237956, 0.4569558, 0.45695066, 1)
+albedo_texture = ExtResource("1_vjfx7")
+roughness_texture_channel = 4
+uv1_scale = Vector3(0.05, 0.05, 0.05)
+uv1_triplanar = true
