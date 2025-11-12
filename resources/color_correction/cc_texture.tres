@@ -1,0 +1,10 @@
+[gd_resource type="CurveXYZTexture" load_steps=4 format=3 uid="uid://i5sgm8k5q3rv"]
+
+[ext_resource type="Curve" uid="uid://c3t5egehknmo3" path="res://resources/color_correction/r_curve.tres" id="1_8o56x"]
+[ext_resource type="Curve" uid="uid://br4k4ib0xjppe" path="res://resources/color_correction/g_curve.tres" id="2_jc60d"]
+[ext_resource type="Curve" uid="uid://demrc2aiacfyy" path="res://resources/color_correction/b_curve.tres" id="3_6h68k"]
+
+[resource]
+curve_x = ExtResource("1_8o56x")
+curve_y = ExtResource("2_jc60d")
+curve_z = ExtResource("3_6h68k")

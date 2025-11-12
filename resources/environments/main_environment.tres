@@ -1,4 +1,6 @@
-[gd_resource type="Environment" load_steps=3 format=3 uid="uid://jrfcngmi4ih2"]
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://jrfcngmi4ih2"]
+
+[ext_resource type="Texture2D" uid="uid://i5sgm8k5q3rv" path="res://resources/color_correction/cc_texture.tres" id="1_fngxi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rxg2q"]
 sky_top_color = Color(0.33638352, 0.44637436, 0.65929604, 1)
@@ -38,3 +40,8 @@ volumetric_fog_albedo = Color(0.7213384, 0.739975, 0.753054, 1)
 volumetric_fog_anisotropy = -0.1
 volumetric_fog_length = 256.0
 volumetric_fog_ambient_inject = 0.5
+adjustment_enabled = true
+adjustment_brightness = 1.05
+adjustment_contrast = 0.91
+adjustment_saturation = 0.86
+adjustment_color_correction = ExtResource("1_fngxi")
