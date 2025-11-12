@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://va0kght3yov3"]
+
+[ext_resource type="Texture2D" uid="uid://bxyauqwky8tr2" path="res://resources/trees/Arboles/R2.png" id="1_n8wp6"]
+
+[resource]
+resource_name = "TexturesCom_Branches0018_1_masked_S"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+depth_draw_mode = 1
+diffuse_mode = 1
+specular_mode = 2
+albedo_texture = ExtResource("1_n8wp6")
+roughness = 0.67

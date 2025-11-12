@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dp8sdl4ps8xu2"]
+[gd_scene load_steps=37 format=3 uid="uid://dp8sdl4ps8xu2"]
 
 [ext_resource type="Material" uid="uid://ib3ge7vrata7" path="res://resources/materials/road.tres" id="1_g2h75"]
 [ext_resource type="Material" uid="uid://660l7kfkene3" path="res://resources/materials/wood (cabin).tres" id="1_ru4tf"]
@@ -8,7 +8,40 @@
 [ext_resource type="Material" uid="uid://bkqjf6i0vw30b" path="res://resources/materials/dirt.tres" id="3_m7ahb"]
 [ext_resource type="PackedScene" uid="uid://cj84mtxk102yo" path="res://scenes/storehouse.tscn" id="6_6sh32"]
 [ext_resource type="Environment" uid="uid://jrfcngmi4ih2" path="res://resources/environments/main_environment.tres" id="7_ejswk"]
+[ext_resource type="PackedScene" uid="uid://dhjis0dh3pgyn" path="res://resources/rocks/scatter/scatter_4.tscn" id="8_i8kv5"]
 [ext_resource type="Material" uid="uid://bf4ddhn4qow5t" path="res://resources/materials/foil.tres" id="9_conm7"]
+[ext_resource type="PackedScene" uid="uid://ccl1yln5y4scs" path="res://resources/trees/Arboles/tree_4.tscn" id="10_d3jkd"]
+[ext_resource type="PackedScene" uid="uid://kqg33ffj8dav" path="res://resources/rocks/Rocas/rock_1.tscn" id="11_3w4mx"]
+[ext_resource type="PackedScene" uid="uid://ce4h8xrm3faw7" path="res://resources/rocks/Rocas/rock_2.tscn" id="11_f31uk"]
+[ext_resource type="PackedScene" uid="uid://c572024uov821" path="res://resources/rocks/scatter/scatter_1.tscn" id="11_u3awl"]
+[ext_resource type="PackedScene" uid="uid://bkeseu6ygtrld" path="res://resources/rocks/Rocas/rock_3.tscn" id="12_gnai3"]
+[ext_resource type="PackedScene" uid="uid://b6nogfcpcx7n2" path="res://resources/rocks/scatter/scatter_2.tscn" id="13_dxn3v"]
+[ext_resource type="PackedScene" uid="uid://bo5kfylko84bq" path="res://resources/rocks/Rocas/rock_4.tscn" id="13_i8kv5"]
+[ext_resource type="PackedScene" uid="uid://dyf5idjcfwlng" path="res://resources/rocks/Rocas/rock_5.tscn" id="13_u068y"]
+[ext_resource type="PackedScene" uid="uid://co7mb4lvmc47n" path="res://resources/rocks/scatter/scatter_3.tscn" id="14_14jow"]
+[ext_resource type="PackedScene" uid="uid://dv3urqg1qloai" path="res://resources/rocks/Rocas/rock_6.tscn" id="15_mvsps"]
+
+[sub_resource type="Gradient" id="Gradient_14jow"]
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0, 0.23357664, 0.5912409, 0.73722625)
+colors = PackedColorArray(1, 1, 1, 1, 0.5776354, 0.5776354, 0.5776353, 0.66423357, 0.039796077, 0.03979609, 0.039796047, 0.14549875, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mvsps"]
+gradient = SubResource("Gradient_14jow")
+fill = 1
+fill_from = Vector2(0.48433048, 0.47293448)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_jvkml"]
+frequency = 0.0106
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_3w4mx"]
+noise = SubResource("FastNoiseLite_jvkml")
+as_normal_map = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_14jow"]
+shading_mode = 0
+diffuse_mode = 1
+specular_mode = 2
 
 [sub_resource type="Gradient" id="Gradient_conm7"]
 offsets = PackedFloat32Array(0.41416892, 0.8828338)
@@ -59,7 +92,8 @@ light_color = Color(0.9999998, 0.9712381, 0.91382796, 1)
 light_volumetric_fog_energy = 0.8
 light_bake_mode = 1
 shadow_enabled = true
-shadow_opacity = 0.7
+shadow_bias = 0.05
+shadow_opacity = 0.8
 directional_shadow_blend_splits = true
 directional_shadow_max_distance = 150.0
 
@@ -417,220 +451,321 @@ material = ExtResource("1_g2h75")
 [node name="Rocks" type="CSGCombiner3D" parent="."]
 use_collision = true
 
-[node name="CSGBox3D16" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.8855477, 0, 0.4645484, 0, 1, 0, -0.4645484, 0, 0.8855477, 7.6391726, -3.6395483, 44.30221)
-size = Vector3(4.357666, 3.7021484, 3.5854492)
-material = ExtResource("3_dwgg1")
+[node name="Rock cluster" type="Node3D" parent="Rocks"]
+visible = false
 
-[node name="CSGBox3D50" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.8855477, 0, 0.4645484, 0, 1, 0, -0.4645484, 0, 0.8855477, 16.295288, -5.9556046, 58.70129)
-size = Vector3(2.4951172, 3.7021484, 3.5854492)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D51" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.9163698, 0, -0.4003331, 0, 1, 0, 0.4003331, 0, 0.9163698, 15.694321, -5.338775, 55.876648)
-size = Vector3(2.4951172, 3.7021484, 3.5854492)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D54" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.19132283, 0, -0.9815272, 0, 1, 0, 0.9815272, 0, 0.19132283, 15.407695, -5.8564386, 53.2334)
-size = Vector3(3.2739258, 3.7021484, 3.5854492)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D55" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.19132283, 0, -0.9815272, 0, 1, 0, 0.9815272, 0, 0.19132283, 17.700369, -5.2194133, 52.20073)
-size = Vector3(1.8640137, 3.7021484, 1.8322754)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D56" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(-0.63518906, 0, -0.77235675, 0, 1, 0, 0.77235675, 0, -0.63518906, 21.58096, -5.2194138, 52.17154)
-size = Vector3(1.8640137, 3.7021484, 1.8322754)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D58" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(-0.63518906, 0, -0.77235675, 0, 1, 0, 0.77235675, 0, -0.63518906, 21.891958, -4.6487665, 53.75464)
-size = Vector3(1.8640137, 3.7021484, 1.8322754)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D57" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.48369476, 0, -0.87523675, 0, 1, 0, 0.87523675, 0, 0.48369476, 22.839415, -5.9123883, 52.594273)
-size = Vector3(1.8640137, 3.7021484, 1.8322754)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D19" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.89782023, 0, -0.44036236, 0, 1, 0, 0.44036236, 0, 0.89782023, 11.373212, -4.4964, 44.45842)
-size = Vector3(4.357666, 3.7021484, 4.0855713)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D22" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.3726315, 0, -0.92797947, 0, 1, 0, 0.92797947, 0, 0.3726315, 13.230923, -5.1414194, 46.99669)
-size = Vector3(2.8642578, 2.4121094, 2.1672974)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D20" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.15333077, 0, -0.9881749, 0, 1, 0, 0.9881749, 0, 0.15333077, 13.271357, -1.7527406, 43.008816)
-size = Vector3(5.4327393, 3.7021484, 4.0855713)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D21" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(-0.14680819, 0, -0.989165, 0, 1, 0, 0.989165, 0, -0.14680819, 14.915063, 0.07081008, 40.811077)
-size = Vector3(5.8565063, 3.2226563, 4.181549)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D25" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(-0.5358561, 0, 0.8443092, 0, 1, 0, -0.8443092, 0, -0.5358561, 17.339823, -0.37676072, 39.7571)
-size = Vector3(3.9961243, 2.5878906, 2.6669464)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D26" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.36430803, 0, 0.9312784, 0, 1, 0, -0.9312784, 0, 0.36430803, 19.659134, -0.061012268, 41.48358)
-size = Vector3(3.9961243, 2.5878906, 2.6669464)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D27" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.94997764, 0, 0.31231827, 0, 1, 0, -0.31231827, 0, 0.94997764, 19.93359, -0.7246728, 44.03254)
-size = Vector3(3.9961243, 2.5878906, 2.6669464)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D34" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.7530124, 0, -0.6580065, 0, 1, 0, 0.6580065, 0, 0.7530124, 17.790525, -2.7724066, 44.368427)
-size = Vector3(3.9961243, 2.5878906, 2.6669464)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D28" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.7000872, 0, -0.71405756, 0, 1, 0, 0.71405756, 0, 0.7000872, 22.68393, -1.8488164, 44.492992)
-size = Vector3(3.9961243, 2.9492188, 2.6669464)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D38" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.50671095, 0, -0.86211616, 0, 1, 0, 0.86211616, 0, 0.50671095, 23.173843, -4.225571, 45.26035)
-size = Vector3(3.9961243, 4.222168, 2.6669464)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D29" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.9997637, 0, -0.021745116, 0, 1, 0, 0.021745116, 0, 0.9997637, 21.523092, -0.4050498, 43.102562)
-size = Vector3(3.2733307, 2.5878906, 4.0540543)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D30" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.83432883, 0, -0.5512674, 0, 1, 0, 0.5512674, 0, 0.83432883, 16.695969, -0.94193435, 43.1608)
-size = Vector3(3.2733307, 2.5878906, 4.0540543)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D31" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(-0.3846176, 0, -0.9230762, 0, 1, 0, 0.9230762, 0, -0.3846176, 14.950988, -4.0461235, 45.30768)
-size = Vector3(3.2733307, 4.5321045, 4.0540543)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D32" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(-0.8414638, 0, -0.5403139, 0, 1, 0, 0.5403139, 0, -0.8414638, 17.722778, -5.5088563, 44.968212)
-size = Vector3(3.2733307, 4.5321045, 4.0540543)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D33" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(-0.8414638, 0, -0.5403139, 0, 1, 0, 0.5403139, 0, -0.8414638, 20.52878, -4.272744, 45.030804)
-size = Vector3(3.2733307, 6.8861694, 4.0540543)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D35" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(-0.08498213, 0, -0.9963827, 0, 1, 0, 0.9963827, 0, -0.08498213, 25.713774, -4.2727447, 44.941704)
-size = Vector3(3.2733307, 6.8861694, 4.0540543)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D36" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(-0.86243427, 0, -0.50616944, 0, 1, 0, 0.50616944, 0, -0.86243427, 28.75699, -4.9864798, 46.371475)
-size = Vector3(3.2733307, 6.8861694, 4.0540543)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D37" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(-0.9086032, 0, 0.4176609, 0, 1, 0, -0.4176609, 0, -0.9086032, 31.458138, -3.554769, 45.292664)
-size = Vector3(3.2733307, 9.932831, 4.0540543)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D39" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(-0.13536993, 0, 0.9907954, 0, 1, 0, -0.9907954, 0, -0.13536993, 28.872171, -0.5991552, 44.819035)
-size = Vector3(1.6737747, 3.5632, 4.5519295)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D40" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.66998625, 0, 0.7423739, 0, 1, 0, -0.7423739, 0, 0.66998625, 23.59328, -0.6090636, 43.766506)
-size = Vector3(1.6737747, 3.729704, 2.3291874)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D41" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.9619471, 0, -0.2732373, 0, 1, 0, 0.2732373, 0, 0.9619471, 25.754383, -0.5379236, 44.05864)
-size = Vector3(2.4903297, 2.940853, 2.3291874)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D23" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(-0.8841654, 0, -0.46717376, 0, 1, 0, 0.46717376, 0, -0.8841654, 14.854689, 0.39958596, 36.50749)
-size = Vector3(5.8565063, 3.2226563, 4.181549)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D17" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.17149928, 0, 0.9851843, 0, 1, 0, -0.9851843, 0, 0.17149928, 10.964455, -2.3840442, 41.219807)
-size = Vector3(4.357666, 3.7021484, 3.5854492)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D18" type="CSGBox3D" parent="Rocks"]
-transform = Transform3D(0.69036496, 0, 0.7234614, 0, 1, 0, -0.7234614, 0, 0.69036496, 13.082036, -1.0185752, 38.917236)
-size = Vector3(4.357666, 3.7021484, 3.5854492)
-material = ExtResource("3_dwgg1")
-
-[node name="CSGBox3D42" type="CSGBox3D" parent="Rocks"]
+[node name="CSGBox3D42" type="CSGBox3D" parent="Rocks/Rock cluster"]
 transform = Transform3D(0.69036496, 0, 0.7234614, 0, 1, 0, -0.7234614, 0, 0.69036496, -13.082644, -4.004537, 52.04927)
 size = Vector3(4.357666, 3.7454834, 3.5854492)
 material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D43" type="CSGBox3D" parent="Rocks"]
+[node name="CSGBox3D43" type="CSGBox3D" parent="Rocks/Rock cluster"]
 transform = Transform3D(0.8622574, 0, -0.5064703, 0, 1, 0, 0.5064703, 0, 0.8622574, -10.013655, -4.8870935, 51.840675)
 size = Vector3(3.4439697, 2.9407043, 3.5854492)
 material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D52" type="CSGBox3D" parent="Rocks"]
+[node name="CSGBox3D52" type="CSGBox3D" parent="Rocks/Rock cluster"]
 transform = Transform3D(0.97052336, 0, 0.2410073, 0, 1, 0, -0.2410073, 0, 0.97052336, -12.187457, -4.423917, 54.096493)
 size = Vector3(3.4439697, 2.9407043, 3.5854492)
 material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D53" type="CSGBox3D" parent="Rocks"]
+[node name="CSGBox3D53" type="CSGBox3D" parent="Rocks/Rock cluster"]
 transform = Transform3D(0.4346968, 0, 0.9005768, 0, 1, 0, -0.9005768, 0, 0.4346968, -10.102558, -5.20103, 54.741943)
 size = Vector3(3.4439697, 2.9407043, 3.6408691)
 material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D47" type="CSGBox3D" parent="Rocks"]
+[node name="CSGBox3D47" type="CSGBox3D" parent="Rocks/Rock cluster"]
 transform = Transform3D(0.99899274, 0.0010713718, 0.044859596, -0.0013015566, 0.9999861, 0.0051025185, -0.044853505, -0.0051557645, 0.9989803, -9.560353, -4.5824056, 50.242016)
 size = Vector3(2.364563, 3.5514832, 3.5854492)
 material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D48" type="CSGBox3D" parent="Rocks"]
+[node name="CSGBox3D48" type="CSGBox3D" parent="Rocks/Rock cluster"]
 transform = Transform3D(0.4976214, 0.0050735762, -0.86737967, -0.0013015567, 0.99998623, 0.005102519, 0.8673934, -0.0014101703, 0.49762106, -10.251845, -4.3607874, 49.38975)
 size = Vector3(2.364563, 3.9864197, 5.21344)
 material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D49" type="CSGBox3D" parent="Rocks"]
+[node name="CSGBox3D49" type="CSGBox3D" parent="Rocks/Rock cluster"]
 transform = Transform3D(-0.39606157, 0.004169764, -0.91821456, -0.0013015565, 0.99998623, 0.005102519, 0.918223, 0.0032160275, -0.39605072, -8.850246, -5.221577, 47.660267)
 size = Vector3(2.364563, 3.9864197, 2.0588684)
 material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D44" type="CSGBox3D" parent="Rocks"]
+[node name="Rock cluster2" type="Node3D" parent="Rocks"]
+
+[node name="CSGBox3D44" type="CSGBox3D" parent="Rocks/Rock cluster2"]
 transform = Transform3D(0.69036496, 0, 0.7234614, 0, 1, 0, -0.7234614, 0, 0.69036496, -10.220771, -0.76161003, 29.11394)
 size = Vector3(4.357666, 3.7454834, 3.5854492)
 material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D45" type="CSGBox3D" parent="Rocks"]
+[node name="CSGBox3D45" type="CSGBox3D" parent="Rocks/Rock cluster2"]
 transform = Transform3D(0.961454, 0, -0.2749662, 0, 1, 0, 0.2749662, 0, 0.961454, -6.2178125, -1.3947651, 29.425188)
 size = Vector3(4.357666, 3.7454834, 3.5854492)
 material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D46" type="CSGBox3D" parent="Rocks"]
+[node name="CSGBox3D46" type="CSGBox3D" parent="Rocks/Rock cluster2"]
 transform = Transform3D(0.9266468, 0, 0.37593317, 0, 1, 0, -0.37593317, 0, 0.9266468, -3.5556135, -2.2964666, 28.83143)
 size = Vector3(4.4156265, 4.1725464, 3.9238892)
 material = ExtResource("3_dwgg1")
 
-[node name="CSGBox3D24" type="CSGBox3D" parent="Rocks"]
+[node name="Rock cluster3" type="Node3D" parent="Rocks"]
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.8855477, 0, 0.4645484, 0, 1, 0, -0.4645484, 0, 0.8855477, 7.6391726, -3.6395483, 44.30221)
+size = Vector3(4.357666, 3.7021484, 3.5854492)
+material = ExtResource("3_dwgg1")
+
+[node name="Rock cluster" type="Node3D" parent="Rocks/Rock cluster3"]
+visible = false
+
+[node name="CSGBox3D50" type="CSGBox3D" parent="Rocks/Rock cluster3/Rock cluster"]
+transform = Transform3D(0.8855477, 0, 0.4645484, 0, 1, 0, -0.4645484, 0, 0.8855477, 16.295288, -5.9556046, 58.70129)
+size = Vector3(2.4951172, 3.7021484, 3.5854492)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D51" type="CSGBox3D" parent="Rocks/Rock cluster3/Rock cluster"]
+transform = Transform3D(0.9163698, 0, -0.4003331, 0, 1, 0, 0.4003331, 0, 0.9163698, 15.694321, -5.338775, 55.876648)
+size = Vector3(2.4951172, 3.7021484, 3.5854492)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D54" type="CSGBox3D" parent="Rocks/Rock cluster3/Rock cluster"]
+transform = Transform3D(0.19132283, 0, -0.9815272, 0, 1, 0, 0.9815272, 0, 0.19132283, 15.407695, -5.8564386, 53.2334)
+size = Vector3(3.2739258, 3.7021484, 3.5854492)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D55" type="CSGBox3D" parent="Rocks/Rock cluster3/Rock cluster"]
+transform = Transform3D(0.19132283, 0, -0.9815272, 0, 1, 0, 0.9815272, 0, 0.19132283, 17.700369, -5.2194133, 52.20073)
+size = Vector3(1.8640137, 3.7021484, 1.8322754)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D56" type="CSGBox3D" parent="Rocks/Rock cluster3/Rock cluster"]
+transform = Transform3D(-0.63518906, 0, -0.77235675, 0, 1, 0, 0.77235675, 0, -0.63518906, 21.58096, -5.2194138, 52.17154)
+size = Vector3(1.8640137, 3.7021484, 1.8322754)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D58" type="CSGBox3D" parent="Rocks/Rock cluster3/Rock cluster"]
+transform = Transform3D(-0.63518906, 0, -0.77235675, 0, 1, 0, 0.77235675, 0, -0.63518906, 21.891958, -4.6487665, 53.75464)
+size = Vector3(1.8640137, 3.7021484, 1.8322754)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D57" type="CSGBox3D" parent="Rocks/Rock cluster3/Rock cluster"]
+transform = Transform3D(0.48369476, 0, -0.87523675, 0, 1, 0, 0.87523675, 0, 0.48369476, 22.839415, -5.9123883, 52.594273)
+size = Vector3(1.8640137, 3.7021484, 1.8322754)
+material = ExtResource("3_dwgg1")
+
+[node name="Rock cluster2" type="Node3D" parent="Rocks/Rock cluster3"]
+
+[node name="Scatter2" parent="Rocks/Rock cluster3/Rock cluster2" instance=ExtResource("13_dxn3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.041721, -5.6181016, 54.588634)
+
+[node name="Scatter1" parent="Rocks/Rock cluster3/Rock cluster2" instance=ExtResource("11_u3awl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.034242, -4.784712, 52.839527)
+
+[node name="Rock4" parent="Rocks/Rock cluster3/Rock cluster2" instance=ExtResource("13_i8kv5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.894787, -5.532742, 56.112045)
+
+[node name="Rock1" parent="Rocks/Rock cluster3/Rock cluster2" instance=ExtResource("11_3w4mx")]
+transform = Transform3D(0.7164602, 0, -0.6976279, 0, 1, 0, 0.6976279, 0, 0.7164602, 17.34303, -5.3874307, 56.513172)
+
+[node name="Scatter3" parent="Rocks/Rock cluster3/Rock cluster2" instance=ExtResource("13_dxn3v")]
+transform = Transform3D(0.7794583, 0, -0.6264542, 0, 1, 0, 0.6264542, 0, 0.7794583, 20.479986, -5.2473383, 53.10926)
+
+[node name="Scatter4" parent="Rocks/Rock cluster3/Rock cluster2" instance=ExtResource("8_i8kv5")]
+transform = Transform3D(0.47771087, 0, -0.8785171, 0, 1, 0, 0.8785171, 0, 0.47771087, 23.17843, -4.8722725, 52.63059)
+
+[node name="Rock5" parent="Rocks/Rock cluster3/Rock cluster2" instance=ExtResource("13_u068y")]
+transform = Transform3D(0.10105716, 0, -0.35396662, 0, 0.3681099, 0, 0.35396662, 0, 0.10105716, 21.134323, -5.691739, 54.31377)
+
+[node name="Rock6" parent="Rocks/Rock cluster3/Rock cluster2" instance=ExtResource("13_u068y")]
+transform = Transform3D(-0.24530455, 0, -0.2744642, 0, 0.36810994, 0, 0.2744642, 0, -0.24530455, 19.846838, -5.691739, 54.95543)
+
+[node name="Rock2" parent="Rocks/Rock cluster3/Rock cluster2" instance=ExtResource("11_f31uk")]
+transform = Transform3D(1.1832607, 0, -0.43386114, 0, 0.834892, 0, 1.0696456, 0, 0.47994477, 22.299755, -5.545276, 54.0407)
+
+[node name="Rock7" parent="Rocks/Rock cluster3/Rock cluster2" instance=ExtResource("15_mvsps")]
+transform = Transform3D(-0.74713004, 0, 0.1885951, 0, 0.7705656, 0, -0.1885951, 0, -0.74713004, 16.260534, -5.86107, 58.188126)
+
+[node name="Rock3" parent="Rocks/Rock cluster3/Rock cluster2" instance=ExtResource("12_gnai3")]
+transform = Transform3D(0.041238975, -0.65326977, -0.0025944014, -0.5669724, -0.03449931, -0.32530144, 0.3245159, 0.022741515, -0.56801504, 15.464751, -6.2521033, 58.50414)
+
+[node name="Collision" type="CSGPolygon3D" parent="Rocks/Rock cluster3/Rock cluster2"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 14.40046, -7.2556458, 53.701496)
+visible = false
+use_collision = true
+polygon = PackedVector2Array(-0.76202106, 1.8668251, 0.3523302, 2.4290962, 0.6360979, 3.1933327, 0.2741661, 4.460617, 0.6417742, 4.81855, 0.821414, 5.2724457, 1.0019941, 5.4304504, 1.1374292, 6.043133, 2.0338755, 6.2527313, 2.7755404, 6.313999, 3.0657587, 5.6207047, 3.301156, 4.6726646, 2.8386278, 4.265564, 2.877324, 4.188175, 4.3284082, 2.7822342, 3.928462, 2.4078217, 4.196107, 1.5145988, 4.4895487, 1.4791298, 4.4959974, 1.5790939, 4.5927362, 2.027317, 4.940997, 2.1756477, 5.260236, 2.1498528, 5.5794744, 2.178875, 6.161145, 2.1602058, 6.6125937, 1.8506393, 6.6480646, 1.7023087, 6.9350557, 1.7539024, 7.2123747, 1.5185051, 7.457446, 0.9928894, 7.9733877, 1.1186485, 8.228133, 0.95741653, 8.540923, 1.0799522, 8.618314, 1.105751, 8.92685, 1.6661263, 10.236051, 0.5923233, 9.909932, -0.18383026, 10.6644945, 0.17087936, 10.206441, -1.933197, 10.206441, -2.1137772, 9.758218, -1.8912773, 9.271298, -2.5200806, 9.08694, -2.6877136, 8.904475, -2.8840027, 8.514667, -3.4341583, 7.4309416, -3.710617, 6.5376654, -3.1726112, 6.174285, -2.4349518, 6.091346, -2.4183655, 5.1596746, -3.1565132, 4.3247633, -3.6154366, 3.357152, -2.6561203, 2.7524366, -2.7867393, 2.4897985, -2.7314453, 1.7295313, -2.3886337, 1.4075222, -1.3638496, 0.8656597, -1.878067, 0.6638441, -1.3085594, 0.53390694, -1.0127449, 0.3984413, -0.8772774, 0.057522774, -0.86767197, 0.044742584, -0.20569992, 0.111195564, -0.10346222, -0.2822504, 0.051071167, -0.75855255, 0.52474976)
+depth = 20.0
+
+[node name="Decal16" type="Decal" parent="Rocks/Rock cluster3/Rock cluster2"]
+transform = Transform3D(0.5750909, -0.07981682, -0.8141868, -0.13880837, 0.97127837, -0.19326273, 0.80622756, 0.2241596, 0.5474938, 18.233913, -3.1677275, 54.57955)
+size = Vector3(10.000267, 11.436943, 12.871128)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.89782023, 0, -0.44036236, 0, 1, 0, 0.44036236, 0, 0.89782023, 11.373212, -4.4964, 44.45842)
+size = Vector3(4.357666, 3.7021484, 4.0855713)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D22" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.3726315, 0, -0.92797947, 0, 1, 0, 0.92797947, 0, 0.3726315, 13.230923, -5.1414194, 46.99669)
+size = Vector3(2.8642578, 2.4121094, 2.1672974)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.15333077, 0, -0.9881749, 0, 1, 0, 0.9881749, 0, 0.15333077, 13.271357, -1.7527406, 43.008816)
+size = Vector3(5.4327393, 3.7021484, 4.0855713)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D21" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(-0.14680819, 0, -0.989165, 0, 1, 0, 0.989165, 0, -0.14680819, 14.915063, 0.07081008, 40.811077)
+size = Vector3(5.8565063, 3.2226563, 4.181549)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D25" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(-0.5358561, 0, 0.8443092, 0, 1, 0, -0.8443092, 0, -0.5358561, 17.339823, -0.37676072, 39.7571)
+size = Vector3(3.9961243, 2.5878906, 2.6669464)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D26" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.36430803, 0, 0.9312784, 0, 1, 0, -0.9312784, 0, 0.36430803, 19.659134, -0.061012268, 41.48358)
+size = Vector3(3.9961243, 2.5878906, 2.6669464)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D27" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.94997764, 0, 0.31231827, 0, 1, 0, -0.31231827, 0, 0.94997764, 19.93359, -0.7246728, 44.03254)
+size = Vector3(3.9961243, 2.5878906, 2.6669464)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D34" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.7530124, 0, -0.6580065, 0, 1, 0, 0.6580065, 0, 0.7530124, 17.790525, -2.7724066, 44.368427)
+size = Vector3(3.9961243, 2.5878906, 2.6669464)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D28" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.7000872, 0, -0.71405756, 0, 1, 0, 0.71405756, 0, 0.7000872, 22.68393, -1.8488164, 44.492992)
+size = Vector3(3.9961243, 2.9492188, 2.6669464)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D38" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.50671095, 0, -0.86211616, 0, 1, 0, 0.86211616, 0, 0.50671095, 23.173843, -4.225571, 45.26035)
+size = Vector3(3.9961243, 4.222168, 2.6669464)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D29" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.9997637, 0, -0.021745116, 0, 1, 0, 0.021745116, 0, 0.9997637, 21.523092, -0.4050498, 43.102562)
+size = Vector3(3.2733307, 2.5878906, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D30" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.83432883, 0, -0.5512674, 0, 1, 0, 0.5512674, 0, 0.83432883, 16.695969, -0.94193435, 43.1608)
+size = Vector3(3.2733307, 2.5878906, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D31" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(-0.3846176, 0, -0.9230762, 0, 1, 0, 0.9230762, 0, -0.3846176, 14.950988, -4.0461235, 45.30768)
+size = Vector3(3.2733307, 4.5321045, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D32" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(-0.8414638, 0, -0.5403139, 0, 1, 0, 0.5403139, 0, -0.8414638, 17.722778, -5.5088563, 44.968212)
+size = Vector3(3.2733307, 4.5321045, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D33" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(-0.8414638, 0, -0.5403139, 0, 1, 0, 0.5403139, 0, -0.8414638, 20.52878, -4.272744, 45.030804)
+size = Vector3(3.2733307, 6.8861694, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D35" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(-0.08498213, 0, -0.9963827, 0, 1, 0, 0.9963827, 0, -0.08498213, 25.713774, -4.2727447, 44.941704)
+size = Vector3(3.2733307, 6.8861694, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D36" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(-0.86243427, 0, -0.50616944, 0, 1, 0, 0.50616944, 0, -0.86243427, 28.75699, -4.9864798, 46.371475)
+size = Vector3(3.2733307, 6.8861694, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D37" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(-0.9086032, 0, 0.4176609, 0, 1, 0, -0.4176609, 0, -0.9086032, 31.458138, -3.554769, 45.292664)
+size = Vector3(3.2733307, 9.932831, 4.0540543)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D39" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(-0.13536993, 0, 0.9907954, 0, 1, 0, -0.9907954, 0, -0.13536993, 28.872171, -0.5991552, 44.819035)
+size = Vector3(1.6737747, 3.5632, 4.5519295)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D40" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.66998625, 0, 0.7423739, 0, 1, 0, -0.7423739, 0, 0.66998625, 23.59328, -0.6090636, 43.766506)
+size = Vector3(1.6737747, 3.729704, 2.3291874)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D41" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.9619471, 0, -0.2732373, 0, 1, 0, 0.2732373, 0, 0.9619471, 25.754383, -0.5379236, 44.05864)
+size = Vector3(2.4903297, 2.940853, 2.3291874)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D23" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(-0.8841654, 0, -0.46717376, 0, 1, 0, 0.46717376, 0, -0.8841654, 14.854689, 0.39958596, 36.50749)
+size = Vector3(5.8565063, 3.2226563, 4.181549)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.17149928, 0, 0.9851843, 0, 1, 0, -0.9851843, 0, 0.17149928, 10.964455, -2.3840442, 41.219807)
+size = Vector3(4.357666, 3.7021484, 3.5854492)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Rocks/Rock cluster3"]
+transform = Transform3D(0.69036496, 0, 0.7234614, 0, 1, 0, -0.7234614, 0, 0.69036496, 13.082036, -1.0185752, 38.917236)
+size = Vector3(4.357666, 3.7021484, 3.5854492)
+material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D24" type="CSGBox3D" parent="Rocks/Rock cluster3"]
 transform = Transform3D(0.95775735, 0, -0.28757787, 0, 1, 0, 0.28757787, 0, 0.95775735, 13.037601, -1.5591142, 37.02168)
 size = Vector3(4.357666, 4.331421, 3.5854492)
 material = ExtResource("3_dwgg1")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Rocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.394943, -3.0327477, 41.27066)
+
+[node name="Rock scatter" type="Node3D" parent="Rocks"]
+
+[node name="Scatter5" parent="Rocks/Rock scatter" instance=ExtResource("8_i8kv5")]
+transform = Transform3D(-0.6032359, 0, -0.7975628, 0, 1, 0, 0.7975628, 0, -0.6032359, -12.821953, -3.6312232, 51.499805)
+
+[node name="Scatter2" parent="Rocks/Rock scatter" instance=ExtResource("11_u3awl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.872219, -4.7710943, 55.824417)
+
+[node name="Scatter3" parent="Rocks/Rock scatter" instance=ExtResource("13_dxn3v")]
+transform = Transform3D(0.4694099, 0, -0.88298035, 0, 1, 0, 0.88298035, 0, 0.4694099, -11.494373, -4.665127, 54.86253)
+
+[node name="Scatter4" parent="Rocks/Rock scatter" instance=ExtResource("14_14jow")]
+transform = Transform3D(0.4624142, 0, -0.88666403, 0, 1, 0, 0.88666403, 0, 0.4624142, -10.00144, -4.6528645, 51.374535)
+
+[node name="Rock6" parent="Rocks/Rock scatter" instance=ExtResource("15_mvsps")]
+transform = Transform3D(0.64103997, 0, 0, 0, 0.64103997, 0, 0, 0, 0.64103997, -11.315103, -3.6958654, 49.75352)
+
+[node name="Rock2" parent="Rocks/Rock scatter" instance=ExtResource("11_f31uk")]
+transform = Transform3D(1.0970758, 0, -1.2857071, 0, 0.9999999, 0, 2.1755192, 0, 0.64835936, -8.508781, -4.8491616, 49.14179)
+
+[node name="Collision2" type="CSGPolygon3D" parent="Rocks/Rock scatter"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -9.899801, -6.003066, 53.624485)
+visible = false
+cast_shadow = 0
+use_collision = true
+polygon = PackedVector2Array(-4.1073647, -3.8873901, -3.9274502, -3.0717545, -4.7981358, -2.2552795, -4.6725616, -2.0888329, -4.8882008, -1.6050262, -4.573036, -1.3976822, -5.07675, -0.9060478, -4.8142385, -0.72037125, -4.423169, -0.16996765, -4.156644, 0.050842285, -4.7250547, 0.83849335, -3.5476332, 2.9334908, -3.1304913, 2.6698341, -2.797143, 2.5097275, -2.5326157, 2.4950027, -2.0324183, 2.858429, -1.3876753, 2.852291, -0.5091553, 3.476696, 0.62766457, 3.3792534, 1.7401237, 2.234314, 2.0047445, 1.7321396, 2.0805907, 1.0874481, 1.818861, -0.18286896, 2.551115, -1.2080727, 2.9283962, -2.149662, 3.1096253, -3.4746246, 2.6496453, -4.823826, 2.6851163, -4.994732, 2.382483, -6.486679, 1.4634666, -7.192871, 0.42527962, -7.0028496, -1.1934805, -5.5195236, -1.1870308, -5.245434, -1.8577528, -5.2583313, -2.5187998, -5.1422462, -2.6208143, -4.3904305)
+depth = 20.0
+material = SubResource("StandardMaterial3D_14jow")
+
+[node name="Rock3" parent="Rocks/Rock scatter" instance=ExtResource("12_gnai3")]
+transform = Transform3D(0.3930806, 0, -0.13375887, 0, 0.3959899, 0, 0.12770444, 0, 0.4117164, -14.403091, -3.47828, 51.834045)
+
+[node name="Decal4" type="Decal" parent="Rocks/Rock scatter"]
+transform = Transform3D(0.57509077, -0.090041615, -0.8131194, -0.13880837, 0.9687732, -0.20545259, 0.8062275, 0.23102172, 0.54463375, -11.108277, -3.9615376, 51.94629)
+size = Vector3(12.425873, 11.436943, 12.146133)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
 
 [node name="Hillside" type="CSGCombiner3D" parent="."]
 use_collision = true
@@ -888,29 +1023,56 @@ size = Vector3(10.639776, 3.3652344, 20.145313)
 material = ExtResource("1_wwpf4")
 
 [node name="CSGBox3D34" type="CSGBox3D" parent="Hillside"]
-transform = Transform3D(0.9994183, -0.003940898, 0.033865403, 0.003784668, 0.9999824, 0.00467596, -0.03388327, -0.0045452025, 0.9994155, 9.71593, -6.499397, 70.786354)
-size = Vector3(11.9993, 3.876831, 25.16333)
+transform = Transform3D(0.9994183, -0.003940898, 0.033865403, 0.003784668, 0.9999824, 0.00467596, -0.03388327, -0.0045452025, 0.9994155, 12.449481, -6.8680234, 70.69368)
+size = Vector3(6.7486043, 3.876831, 25.16333)
 material = ExtResource("1_wwpf4")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Hillside/CSGBox3D34"]
-transform = Transform3D(0.99944097, 0.013687203, 0.0304989, -0.024133477, 0.9267279, 0.3749522, -0.023132175, -0.3754779, 0.9265421, 2.0930448, 2.1156268, -11.402164)
+transform = Transform3D(0.113018855, 0.3826743, -0.9169408, -0.025531188, 0.92366594, 0.38233438, 0.9932575, -0.0198007, 0.11416245, 4.157732, 1.7104044, -0.7581253)
 operation = 2
 size = Vector3(23.631287, 1.6176758, 4.2529907)
 material = ExtResource("1_wwpf4")
 
 [node name="CSGBox3D45" type="CSGBox3D" parent="Hillside"]
-transform = Transform3D(0.9994183, -0.003940898, 0.033865403, 0.003784668, 0.9999824, 0.00467596, -0.03388327, -0.0045452025, 0.9994155, 15.817197, -6.6552753, 59.78441)
-size = Vector3(11.903947, 3.6052856, 15.719055)
+transform = Transform3D(0.9994183, -0.003940898, 0.033865403, 0.003784668, 0.9999824, 0.00467596, -0.03388327, -0.0045452025, 0.9994155, 18.214855, -7.1218204, 58.755646)
+size = Vector3(7.045235, 2.6626663, 17.61734)
 material = ExtResource("1_wwpf4")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Hillside/CSGBox3D45"]
-transform = Transform3D(0.99944097, 0.013687203, 0.0304989, -0.024133477, 0.9267279, 0.3749522, -0.023132175, -0.3754779, 0.9265421, 2.0930448, 2.1156268, -11.402164)
+transform = Transform3D(0.9994403, 0.0136871915, 0.030498914, -0.024133446, 0.92672724, 0.3749522, -0.023132116, -0.37547725, 0.9265408, 2.1033726, 2.2425647, -11.088486)
 operation = 2
-size = Vector3(23.631287, 1.6176758, 4.2529907)
+size = Vector3(23.631287, 1.6176758, 4.930084)
+material = ExtResource("1_wwpf4")
+
+[node name="CSGBox3D47" type="CSGBox3D" parent="Hillside/CSGBox3D45"]
+transform = Transform3D(0.9999956, 9.64792e-09, -1.2293458e-07, 1.10740075e-08, 0.9999978, -1.9557774e-08, 2.2351742e-08, -1.1175871e-08, 0.9999956, 6.210911, -0.094557285, 12.521496)
+size = Vector3(21.972511, 3.6052856, 15.719055)
+material = ExtResource("1_wwpf4")
+
+[node name="CSGBox3D48" type="CSGBox3D" parent="Hillside/CSGBox3D45/CSGBox3D47"]
+transform = Transform3D(0.9528499, -0.047306098, 0.29968473, 0.0015970933, 0.9885282, 0.15096462, -0.30338866, -0.143368, 0.9420036, -7.4044065, 2.0799747, -6.228836)
+operation = 2
+size = Vector3(12.392994, 1.3348694, 6.699732)
+material = ExtResource("1_wwpf4")
+
+[node name="CSGBox3D48" type="CSGBox3D" parent="Hillside"]
+transform = Transform3D(0.9994183, -0.003940898, 0.033865403, 0.003784668, 0.9999824, 0.00467596, -0.03388327, -0.0045452025, 0.9994155, 30.366095, -6.6032944, 58.606117)
+size = Vector3(18.94376, 3.6052856, 15.719055)
+material = ExtResource("1_wwpf4")
+
+[node name="CSGBox3D50" type="CSGBox3D" parent="Hillside/CSGBox3D48"]
+transform = Transform3D(0.95825684, -0.28586417, -0.0027151853, 0.2858752, 0.95821166, 0.009501999, -0.00011477992, -0.009881692, 0.9999446, -7.6511173, 1.9891396, 0.39956284)
+operation = 2
+size = Vector3(6.383157, 1.3905334, 16.60318)
+material = ExtResource("1_wwpf4")
+
+[node name="CSGBox3D49" type="CSGBox3D" parent="Hillside"]
+transform = Transform3D(0.992921, -0.10019096, 0.063787505, 0.10474728, 0.99184465, -0.07261716, -0.05599174, 0.078784615, 0.99531806, 36.094, -5.8390694, 51.59278)
+size = Vector3(12.373247, 3.6052856, 15.719055)
 material = ExtResource("1_wwpf4")
 
 [node name="CSGBox3D35" type="CSGBox3D" parent="Hillside"]
-transform = Transform3D(0.9987838, 0.035822123, 0.033865403, -0.036000602, 0.99934125, 0.0046759592, -0.033675626, -0.0058895815, 0.9994155, 5.093754, -3.2848833, 71.906624)
+transform = Transform3D(0.9987838, 0.035822123, 0.033865403, -0.036000602, 0.99934125, 0.0046759592, -0.033675626, -0.0058895815, 0.9994155, 5.093754, -0.89010215, 71.906624)
 operation = 2
 size = Vector3(23.48671, 3.484375, 27.260471)
 material = ExtResource("1_wwpf4")
@@ -1147,3 +1309,105 @@ radius = 0.9905714
 radial_segments = 16
 rings = 12
 material = ExtResource("9_conm7")
+
+[node name="Tree4" parent="." instance=ExtResource("10_d3jkd")]
+transform = Transform3D(0.72168815, -0.0116647575, 0, 0.0116647575, 0.72168815, 0, 0, 0, 0.7217824, -5.127056, -4.925948, 50.189526)
+visible = false
+
+[node name="Decal" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9984114, 0.056344282, 0, -0.056344282, 0.9984114, -0.58931684, -4.80578, 50.897514)
+size = Vector3(14.162048, 3.1937866, 10.349884)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
+
+[node name="Decal5" type="Decal" parent="."]
+transform = Transform3D(0.7617758, 0, -0.64784074, 0.036502123, 0.9984114, 0.04292171, 0.6468116, -0.056344282, 0.76056564, 3.5539722, -4.0058227, 74.200935)
+size = Vector3(14.162048, 3.1937866, 10.349884)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
+
+[node name="Decal9" type="Decal" parent="."]
+transform = Transform3D(-0.9989729, -3.7252903e-09, 0.045310587, -0.0025529936, 0.9984114, -0.056286413, -0.045238674, -0.056344286, -0.997386, -6.6191235, -4.2051754, 70.66844)
+size = Vector3(14.162048, 3.1937866, 10.349884)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
+
+[node name="Decal10" type="Decal" parent="."]
+transform = Transform3D(-0.006562438, -3.7252903e-09, 0.9999785, -0.05634306, 0.9984114, -0.0003697537, -0.99838984, -0.056344286, -0.0065520816, -21.832764, -4.333018, 68.40307)
+size = Vector3(10.08226, 3.1937866, 24.824356)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
+
+[node name="Decal11" type="Decal" parent="."]
+transform = Transform3D(-0.739678, -3.7252903e-09, 0.6729608, -0.037917495, 0.9984114, -0.04167663, -0.67189175, -0.056344286, -0.7385031, -34.467747, -4.181309, 71.09137)
+size = Vector3(16.40258, 3.1937866, 24.824356)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
+
+[node name="Decal12" type="Decal" parent="."]
+transform = Transform3D(-0.99690086, -3.7252903e-09, 0.07866785, -0.0044324873, 0.9984114, -0.05616966, -0.07854295, -0.05634429, -0.9953172, -37.98696, -3.9318814, 91.14304)
+size = Vector3(16.40258, 3.1937866, 24.824356)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
+
+[node name="Decal6" type="Decal" parent="."]
+transform = Transform3D(-0.54156154, 0, -0.8406611, 0.047366444, 0.9984114, -0.030513894, 0.8393256, -0.056344286, -0.5407012, 5.090297, -3.377181, 85.34037)
+size = Vector3(14.162048, 3.1937866, 11.552994)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
+
+[node name="Decal7" type="Decal" parent="."]
+transform = Transform3D(-0.54156154, 0, -0.8406611, 0.047366444, 0.9984114, -0.030513894, 0.8393256, -0.056344286, -0.5407012, 11.047516, -4.210434, 70.57528)
+size = Vector3(14.162048, 3.1937866, 11.552994)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
+
+[node name="Decal8" type="Decal" parent="."]
+transform = Transform3D(-0.99900436, 0, 0.044613242, -0.0025137067, 0.9984114, -0.056288183, -0.044542402, -0.056344286, -0.99741733, 8.949554, -2.8819404, 94.11597)
+size = Vector3(14.162048, 3.1937866, 16.764164)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
+
+[node name="Decal15" type="Decal" parent="."]
+transform = Transform3D(-0.9998007, -0.0013037041, 0.019922616, -0.0011249318, 0.99995905, 0.008982081, -0.019933539, 0.008957874, -0.99976116, -15.188988, -3.5338793, 82.56368)
+size = Vector3(20.358017, 3.1937866, 10.535217)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
+
+[node name="Decal13" type="Decal" parent="."]
+transform = Transform3D(-0.10904035, 0, 0.9940374, -0.056008328, 0.9984115, -0.006143797, -0.9924583, -0.056344286, -0.10886715, -8.3716955, -4.5891714, 96.33901)
+size = Vector3(14.162048, 3.1937866, 16.764164)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
+
+[node name="Decal14" type="Decal" parent="."]
+transform = Transform3D(0.5027787, 0, 0.8644152, -0.048704863, 0.99841154, 0.028328706, -0.86304206, -0.056344286, 0.5019799, -29.67024, -4.6403766, 95.43165)
+size = Vector3(14.162048, 3.1937866, 16.764164)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
+
+[node name="Decal2" type="Decal" parent="."]
+transform = Transform3D(0.57985014, -3.7252903e-09, -0.8147232, 0.045904994, 0.9984115, 0.03267124, 0.81342894, -0.056344282, 0.57892895, -4.0723305, -3.7799435, 40.769455)
+size = Vector3(14.162048, 6.3835144, 10.349884)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0
+
+[node name="Decal3" type="Decal" parent="."]
+transform = Transform3D(0.57985014, -0.2545746, -0.77392864, 0.04590501, 0.9586281, -0.28093588, 0.81342894, 0.12737352, 0.5675468, 5.477591, -2.6388512, 32.169662)
+size = Vector3(14.162048, 6.3835144, 10.349884)
+texture_albedo = SubResource("GradientTexture2D_mvsps")
+texture_normal = SubResource("NoiseTexture2D_3w4mx")
+albedo_mix = 0.0

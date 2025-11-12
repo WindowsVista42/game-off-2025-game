@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b2wu2pqo4y1by"]
+
+[ext_resource type="Texture2D" uid="uid://cfj8783y6ihxf" path="res://resources/rocks/Rocas/R.jpg" id="1_jos5r"]
+[ext_resource type="Texture2D" uid="uid://dxnv5gxej6hjd" path="res://resources/textures/Concrete044D_1K-JPG_NormalDX.jpg" id="2_3dqqa"]
+
+[resource]
+resource_name = "Material.008"
+cull_mode = 2
+diffuse_mode = 1
+specular_mode = 2
+albedo_color = Color(0.64466304, 0.64466363, 0.64466316, 1)
+albedo_texture = ExtResource("1_jos5r")
+roughness = 0.88
+normal_enabled = true
+normal_texture = ExtResource("2_3dqqa")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
