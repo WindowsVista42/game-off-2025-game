@@ -1,9 +1,17 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ck75kqlvg0enn"]
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://ck75kqlvg0enn"]
 
 [ext_resource type="Texture2D" uid="uid://dx6yxrqgq1tsl" path="res://resources/trees/Arboles/C.jpg" id="1_y4why"]
+[ext_resource type="Texture2D" uid="uid://cfj8783y6ihxf" path="res://resources/rocks/Rocas/R.jpg" id="2_hql2i"]
+[ext_resource type="Texture2D" uid="uid://dxnv5gxej6hjd" path="res://resources/textures/Concrete044D_1K-JPG_NormalDX.jpg" id="2_k4ih2"]
 
 [resource]
 resource_name = "Material.009"
 cull_mode = 2
 albedo_texture = ExtResource("1_y4why")
 roughness = 0.93
+normal_enabled = true
+normal_scale = 1.89
+normal_texture = ExtResource("2_k4ih2")
+ao_enabled = true
+ao_light_affect = 0.23
+ao_texture = ExtResource("2_hql2i")
