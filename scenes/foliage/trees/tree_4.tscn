@@ -65,3 +65,10 @@ shadow_mesh = SubResource("ArrayMesh_bvnei")
 transform = Transform3D(0.72, 0, 0, 0, 0.72, 0, 0, 0, 0.72, 0.059803575, 0.6375828, -0.0077156126)
 mesh = SubResource("ArrayMesh_vxmyn")
 skeleton = NodePath("")
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.118656635, -2.139728e-09, 0.04895127)
+visible = false
+use_collision = true
+polygon = PackedVector2Array(-0.31882042, 0.30817997, -0.46426922, -0.19028533, -0.06580001, -0.5008793, 0.36600107, -0.18725523, 0.20691651, 0.30666485)
+depth = 20.0

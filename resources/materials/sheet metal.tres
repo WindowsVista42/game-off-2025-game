@@ -4,7 +4,7 @@
 
 [resource]
 diffuse_mode = 1
-albedo_color = Color(0.736, 0.83106667, 0.92, 1)
+albedo_color = Color(0.85380507, 0.91232944, 0.94131345, 1)
 albedo_texture = ExtResource("1_2g3f3")
 metallic = 1.0
 roughness = 0.65

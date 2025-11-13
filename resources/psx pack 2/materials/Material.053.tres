@@ -1,7 +1,15 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://dfdbqu4230nj"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dfdbqu4230nj"]
+
+[ext_resource type="Texture2D" uid="uid://dxnv5gxej6hjd" path="res://resources/textures/Concrete044D_1K-JPG_NormalDX.jpg" id="1_vviog"]
 
 [resource]
 resource_name = "Material.053"
+transparency = 1
 cull_mode = 2
-albedo_color = Color(0.8, 0.8, 0.8, 1)
-roughness = 0.07647059
+diffuse_mode = 1
+specular_mode = 2
+albedo_color = Color(1, 1, 1, 0.015686275)
+roughness = 0.05
+normal_enabled = true
+normal_scale = 0.18
+normal_texture = ExtResource("1_vviog")

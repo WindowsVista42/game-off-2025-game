@@ -11,12 +11,14 @@ sky_material = SubResource("ProceduralSkyMaterial_rxg2q")
 
 [resource]
 background_mode = 2
+background_energy_multiplier = 1.2
 sky = SubResource("Sky_rxg2q")
 ambient_light_source = 3
 ambient_light_color = Color(0.25726265, 0.3372861, 0.43005788, 1)
 ambient_light_sky_contribution = 0.44
 ambient_light_energy = 0.55
 tonemap_mode = 4
+tonemap_exposure = 1.25
 ssao_enabled = true
 ssao_radius = 0.61
 ssao_intensity = 0.3
@@ -41,7 +43,6 @@ volumetric_fog_anisotropy = -0.1
 volumetric_fog_length = 256.0
 volumetric_fog_ambient_inject = 0.5
 adjustment_enabled = true
-adjustment_brightness = 1.05
-adjustment_contrast = 0.86
-adjustment_saturation = 0.86
+adjustment_contrast = 0.82
+adjustment_saturation = 0.81
 adjustment_color_correction = ExtResource("1_fngxi")

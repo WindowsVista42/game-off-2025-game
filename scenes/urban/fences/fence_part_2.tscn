@@ -40,3 +40,9 @@ shadow_mesh = SubResource("ArrayMesh_iacgx")
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.7095075, 0.07173884)
 mesh = SubResource("ArrayMesh_xon4o")
 skeleton = NodePath("")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.35999995, 0, 0, 0, 0.35999995, 0, 0, 0, 0.35999995, -0.00036199053, 0.7103996, 0.06860711)
+visible = false
+use_collision = true
+size = Vector3(0.34921265, 3.9305573, 0.36627197)

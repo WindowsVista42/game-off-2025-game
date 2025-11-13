@@ -10,12 +10,14 @@
 diffuse_mode = 1
 specular_mode = 2
 disable_specular_occlusion = true
-albedo_color = Color(0.65056, 0.76, 0.6384, 1)
+albedo_color = Color(0.47575003, 0.55, 0.46750003, 1)
 albedo_texture = ExtResource("1_e13ny")
 normal_enabled = true
 normal_texture = ExtResource("4_1casi")
-bent_normal_enabled = true
 heightmap_texture = ExtResource("4_uu76i")
+subsurf_scatter_strength = 0.9
+subsurf_scatter_texture = ExtResource("2_au8fv")
+backlight = Color(0.55820924, 0.38243636, 0.20815867, 1)
 detail_enabled = true
 detail_mask = ExtResource("2_b71v3")
 detail_blend_mode = 3
