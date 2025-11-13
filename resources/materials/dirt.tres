@@ -1,11 +1,14 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bkqjf6i0vw30b"]
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bkqjf6i0vw30b"]
 
 [ext_resource type="Texture2D" uid="uid://df84wlb83yryq" path="res://resources/textures/d7aopi7-df760885-8389-49a9-872d-425fee355b4f.png" id="1_lqs55"]
+[ext_resource type="Texture2D" uid="uid://dxnv5gxej6hjd" path="res://resources/textures/Concrete044D_1K-JPG_NormalDX.jpg" id="2_12qrp"]
 
 [resource]
 diffuse_mode = 1
 specular_mode = 2
 albedo_texture = ExtResource("1_lqs55")
+normal_enabled = true
+normal_texture = ExtResource("2_12qrp")
 uv1_scale = Vector3(0.05, 0.05, 0.05)
 uv1_triplanar = true
 uv1_triplanar_sharpness = 6.0628676

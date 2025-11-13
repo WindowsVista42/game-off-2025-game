@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d1beja6rjl5fb"]
+
+[ext_resource type="Texture2D" uid="uid://dvy3wxr0b0f3y" path="res://resources/psx pack 2/Concrete_01.jpg" id="1_y57kb"]
+
+[resource]
+resource_name = "Concrete_01"
+cull_mode = 2
+albedo_texture = ExtResource("1_y57kb")
+roughness = 0.07647059

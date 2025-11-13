@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://daxtg8amvrsat"]
+
+[ext_resource type="Texture2D" uid="uid://cms1oeobexj33" path="res://resources/psx pack 2/Mesh.png" id="1_x8i0g"]
+
+[resource]
+resource_name = "Mesh"
+cull_mode = 2
+albedo_texture = ExtResource("1_x8i0g")
+roughness = 0.07647059

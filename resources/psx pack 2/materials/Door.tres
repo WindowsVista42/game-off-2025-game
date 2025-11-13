@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dgyfajpml3vdb"]
+
+[ext_resource type="Texture2D" uid="uid://dgntu0fpocv6w" path="res://resources/psx pack 2/Door.jpg" id="1_nifyi"]
+
+[resource]
+resource_name = "Door"
+cull_mode = 2
+albedo_texture = ExtResource("1_nifyi")
+roughness = 0.07647059

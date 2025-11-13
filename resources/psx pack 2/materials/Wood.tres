@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dy1c4hhon5fsn"]
+
+[ext_resource type="Texture2D" uid="uid://3juui3v7goey" path="res://resources/psx pack 2/Wood.jpg" id="1_6i7j8"]
+
+[resource]
+resource_name = "Wood"
+cull_mode = 2
+albedo_texture = ExtResource("1_6i7j8")
+roughness = 0.07647059

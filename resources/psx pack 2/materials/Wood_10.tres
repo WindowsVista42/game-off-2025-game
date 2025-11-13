@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://2ibdafduixbu"]
+
+[ext_resource type="Texture2D" uid="uid://us7jypfya6jy" path="res://resources/psx pack 2/Wood_10.jpg" id="1_wyen1"]
+[ext_resource type="Texture2D" uid="uid://b70ecgjbe45a1" path="res://resources/textures/111-concrete-bare-clean-texture-seamless.jpg" id="2_256ep"]
+[ext_resource type="Texture2D" uid="uid://dxnv5gxej6hjd" path="res://resources/textures/Concrete044D_1K-JPG_NormalDX.jpg" id="2_ekn80"]
+
+[resource]
+resource_name = "Wood_10"
+cull_mode = 2
+diffuse_mode = 1
+specular_mode = 2
+albedo_color = Color(0.760999, 0.76099914, 0.76099914, 1)
+albedo_texture = ExtResource("1_wyen1")
+roughness_texture = ExtResource("2_256ep")
+normal_enabled = true
+normal_texture = ExtResource("2_ekn80")

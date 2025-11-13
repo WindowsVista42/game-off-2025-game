@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo12mdn2f1rv4"]
+
+[ext_resource type="PackedScene" uid="uid://c6vp3nx7jwedp" path="res://resources/psx pack 2/models/plants/ground_leaves.tscn" id="1_hp76c"]
+
+[node name="Bush" type="Node3D"]
+
+[node name="GroundLeaves" parent="." instance=ExtResource("1_hp76c")]
+transform = Transform3D(0.9673991, -0.013436343, 0.2529001, 0.09539185, 0.94437873, -0.31472096, -0.23460473, 0.32858536, 0.9148727, 0, 0.14229149, 0)
+
+[node name="GroundLeaves2" parent="." instance=ExtResource("1_hp76c")]
+transform = Transform3D(0.82243574, -0.25288758, -0.50955606, 0.095391855, 0.94437885, -0.31472102, 0.56080306, 0.21023028, 0.80081415, 0, 0.14229149, 0)
+
+[node name="GroundLeaves3" parent="." instance=ExtResource("1_hp76c")]
+transform = Transform3D(-0.49080282, -0.23044121, -0.8402437, 0.039169166, 0.95757794, -0.28550017, 0.87038994, -0.17303589, -0.4609556, 0, 0.14229149, 0)
+
+[node name="GroundLeaves4" parent="." instance=ExtResource("1_hp76c")]
+transform = Transform3D(-0.41468197, 0.2471033, -0.87577325, 0.2654439, 0.95341414, 0.14332132, 0.87038994, -0.17303587, -0.46095556, 0, 0.14229149, 0)
+
+[node name="GroundLeaves5" parent="." instance=ExtResource("1_hp76c")]
+transform = Transform3D(0.7619294, -0.2985314, 0.5747545, 0.2654439, 0.95341414, 0.14332134, -0.590765, 0.04336428, 0.8056774, 0, 0.14229149, 0)
+
+[node name="GroundLeaves6" parent="." instance=ExtResource("1_hp76c")]
+transform = Transform3D(0.7973794, 0.18387616, 0.57478344, -0.1232198, 0.98199254, -0.14320545, -0.59076506, 0.04336428, 0.80567753, 0, 0.14229149, 0)

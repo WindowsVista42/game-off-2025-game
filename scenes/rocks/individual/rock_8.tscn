@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=4 uid="uid://cg0ls42xpdac0"]
+
+[ext_resource type="Material" uid="uid://b2wu2pqo4y1by" path="res://resources/rocks/Rocas/Material.008.tres" id="1_b2bgf"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_1wdly"]
+_surfaces = [{
+"aabb": AABB(-0.9510565, -0.3060666, -0.9999999, 1.902113, 0.8985337, 1.8090171),
+"format": 34896613377,
+"index_count": 78,
+"index_data": PackedByteArray("BAAAAAoAAQAAAAQAAAABAAIAAAACAAMAAAADAAYABgADAAIAAAAGAAoACwACAAEABgACAAsADAABAAQACwABAAwABAAKAAkADAAEAAkACQAKAAgACQAFAAwACgAGAA0ACgANAAgABgALAAcADAAHAAsABgAHAA0ADAAFAAcACQAIAA4ADQAOAAgACQAOAAUADgANAAcADgAHAAUA"),
+"lods": [0.32229665, PackedByteArray("AAADAAYABgADAAIAAAACAAMABgACAAcABgAHAAgAAAAGAAgAAQAHAAIAAAABAAIAAQAFAAcABQAIAAcAAQAAAAQACQAIAAUACQAFAAEACQAAAAgAAQAEAAkABAAAAAkA"), 0.678053, PackedByteArray("AAABAAIAAQAAAAQAAAACAAMABAAFAAEABAAAAAUAAQAFAAIAAAADAAUAAwACAAUA"), 1.2622871, PackedByteArray("AAABAAIAAwACAAEAAAACAAMAAwABAAAA")],
+"name": "Material.008",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 15,
+"vertex_data": PackedByteArray("//8AAMhhAAAAAAAAyGEAAOQwAAD+/wAAGs8AAP//AAD/fwAAAAAAAHBL//+OewAASL3olzPmAACDX///hbwAAI60//+OewAA/3/ol+EfAAAo4+iXomsAALZC6Jcz5gAA1hzol6JrAAB7oP//hbwAAP9///9nUwAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jrlxs"]
+resource_name = "Cylinder"
+_surfaces = [{
+"aabb": AABB(-0.9510565, -0.3060666, -0.9999999, 1.902113, 0.8985337, 1.8090171),
+"attribute_data": PackedByteArray("Hb+ikfj/5eodv/j/CZfNyPuWKH/7li/iszj4/xw57F/4/7WmBgCir5xLJL5YdIqbWl5iun5NpqBfLAatpklwiRZxK8ofRNHUq17EpsRDsK4="),
+"format": 34896613399,
+"index_count": 78,
+"index_data": PackedByteArray("CQAHAA8ABwALAA8ABwAEAAsACwAEAAUACwAFABAAEAAFAAYAEQAGAAkAEAAGABEACQAPAA4AEQAJAA4ADgAPAA0ADgAKABEADwALABIADwASAA0ACwAQAAwAEQAMABAACwAMABIAEQAKAAwADgANABMAEgATAA0ADgATAAoAEwASAAwAEwAMAAoAAAABAAIAAQAAAAgAAAACAAMA"),
+"lods": [0.32229665, PackedByteArray("BwAEAAsACwAEAAUACwAFAAwABgAMAAUABwALAA0ACwAMAA0ABgAKAAwACgANAAwADgAKAAYADgANAAoADgAHAA0ABgAJAA4ACQAHAA4AAAABAAIAAQAAAAgAAAACAAMA"), 0.678053, PackedByteArray("AAABAAIAAQAAAAgAAAACAAMACQAHAAoABwAEAAoACQAKAAYABAAFAAoABgAKAAUA"), 1.2622871, PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcA")],
+"material": ExtResource("1_b2bgf"),
+"name": "Material.008",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("//8AAMhhXeUAAAAAyGFd5eQwAAD+/13lGs8AAP//XeUazwAA//9Y2OQwAAD+/wS2AAAAAMhhI8z//wAAyGHq+f9/AAAAAF3l/38AAAAA2fRwS///jnvwzEi96Jcz5mvSg1///4W8KMOOtP//jnuU5f9/6JfhH13wKOPol6JrYfa2QuiXM+bJs9Yc6Jeia43Le6D//4W8OtP/f///Z1Mt4QJm/kwCZv5MAmb+TAJm/kzppcOD84Lzs82cM9utvZ2SAmb+TFC4mrtUqsu62agZiIOgbq0Es/+fFbfBuOy5RpdWkEuzlaQK0bSp4Zo3tPmv")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_1wdly")
+
+[node name="Rock8" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_jrlxs")
+skeleton = NodePath("")

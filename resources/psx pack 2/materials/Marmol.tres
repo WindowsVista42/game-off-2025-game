@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cdow36pl05aob"]
+
+[ext_resource type="Texture2D" uid="uid://crup4hqkmuudb" path="res://resources/psx pack 2/Marmol.png" id="1_sbdvx"]
+
+[resource]
+resource_name = "Marmol"
+cull_mode = 2
+albedo_texture = ExtResource("1_sbdvx")
+roughness = 0.07647059

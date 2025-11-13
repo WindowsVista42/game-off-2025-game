@@ -1,0 +1,883 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://blrw0yqikt41p"
+path="res://.godot/imported/models.dae-c6218d23e1fb553c9d9fd1575ffa9bf8.scn"
+
+[deps]
+
+source_file="res://resources/psx pack 2/models.dae"
+dest_files=["res://.godot/imported/models.dae-c6218d23e1fb553c9d9fd1575ffa9bf8.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"Asphalt": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Asphalt.tres",
+"use_external/path": "uid://8qfyjf3w2ogv"
+},
+"Auto": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Auto.tres",
+"use_external/path": "uid://cqrnuog86tj2i"
+},
+"Auto2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Auto2.tres",
+"use_external/path": "uid://buaaexuj0bpra"
+},
+"Bookcase": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Bookcase.tres",
+"use_external/path": "uid://bh2f5kgcsjh4r"
+},
+"Boxs": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs.tres",
+"use_external/path": "uid://cg7clnfhsx4lb"
+},
+"Boxs_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs_01.tres",
+"use_external/path": "uid://dg7023yqeqydu"
+},
+"Boxs_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs_02.tres",
+"use_external/path": "uid://5x30p0gl5lkn"
+},
+"Boxs_03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs_03.tres",
+"use_external/path": "uid://dwmdv0145wdvq"
+},
+"Boxs_04": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs_04.tres",
+"use_external/path": "uid://cnwpobq28ngyh"
+},
+"Boxs_05": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs_05.tres",
+"use_external/path": "uid://bwjsmagvxfoe4"
+},
+"Boxs_06": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs_06.tres",
+"use_external/path": "uid://c452fg2un013t"
+},
+"Boxs_07": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs_07.tres",
+"use_external/path": "uid://neelicjb3itx"
+},
+"Boxs_08": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs_08.tres",
+"use_external/path": "uid://dhcct5ojentki"
+},
+"Boxs_09": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs_09.tres",
+"use_external/path": "uid://dys2fgek0vt6i"
+},
+"Boxs_10": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs_10.tres",
+"use_external/path": "uid://yhs1mbpx8mkm"
+},
+"Boxs_11": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs_11.tres",
+"use_external/path": "uid://bitc54nngfyrj"
+},
+"Boxs_12": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs_12.tres",
+"use_external/path": "uid://cs7copsyj4cqg"
+},
+"Boxs_13": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs_13.tres",
+"use_external/path": "uid://scgr4l85oppw"
+},
+"Boxs_14": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Boxs_14.tres",
+"use_external/path": "uid://d4hvsj5hs2qpm"
+},
+"Branch": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Branch.tres",
+"use_external/path": "uid://b4gsvycr1fq8p"
+},
+"Branch_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Branch_01.tres",
+"use_external/path": "uid://dgcvfec1jgci3"
+},
+"Branch_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Branch_02.tres",
+"use_external/path": "uid://ber5ns7fk1wdd"
+},
+"Bush": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Bush.tres",
+"use_external/path": "uid://dem8k1clsyt38"
+},
+"Bush_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Bush_01.tres",
+"use_external/path": "uid://bmiwgh47bonrt"
+},
+"Bush_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Bush_02.tres",
+"use_external/path": "uid://dlkee0qj7vuti"
+},
+"Bush_03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Bush_03.tres",
+"use_external/path": "uid://b4gq2c8kikm8d"
+},
+"Bush_04": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Bush_04.tres",
+"use_external/path": "uid://c1gqxdm4p2lmi"
+},
+"Bush_05": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Bush_05.tres",
+"use_external/path": "uid://dnk1a4fbviv7e"
+},
+"Bush_06": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Bush_06.tres",
+"use_external/path": "uid://buqy4lbrydm4r"
+},
+"Bush_07": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Bush_07.tres",
+"use_external/path": "uid://nexlfa3pg4fy"
+},
+"Cardboard": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Cardboard.tres",
+"use_external/path": "uid://s5pc0erat2bc"
+},
+"Cardboard_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Cardboard_01.tres",
+"use_external/path": "uid://cqdl5k70kmr2n"
+},
+"Cardboard_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Cardboard_02.tres",
+"use_external/path": "uid://cih704n5hb7kx"
+},
+"Cash_register": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Cash_register.tres",
+"use_external/path": "uid://i02rnrx27chr"
+},
+"Concrete": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Concrete.tres",
+"use_external/path": "uid://cw5d1tg8st5uc"
+},
+"Concrete_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Concrete_01.tres",
+"use_external/path": "uid://d1beja6rjl5fb"
+},
+"Concrete_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Concrete_02.tres",
+"use_external/path": "uid://dj8uahq7348ck"
+},
+"Concrete_03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Concrete_03.tres",
+"use_external/path": "uid://dsdhdlld0u3gy"
+},
+"Cutlery": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Cutlery.tres",
+"use_external/path": "uid://kym1pjfv32gk"
+},
+"Deposits": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Deposits.tres",
+"use_external/path": "uid://b41e3x5btg6ob"
+},
+"Deposits_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Deposits_01.tres",
+"use_external/path": "uid://bd77l5f1xe05s"
+},
+"Deposits_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Deposits_02.tres",
+"use_external/path": "uid://c4ek1ak5g5sh3"
+},
+"Door": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Door.tres",
+"use_external/path": "uid://dgyfajpml3vdb"
+},
+"Door_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Door_01.tres",
+"use_external/path": "uid://df5drslr1dt0b"
+},
+"Door_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Door_02.tres",
+"use_external/path": "uid://bocg8lwgth4e8"
+},
+"Door_03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Door_03.tres",
+"use_external/path": "uid://c8qgu7id8l4dk"
+},
+"Fabric": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Fabric.tres",
+"use_external/path": "uid://duri6m554tvij"
+},
+"Fabric_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Fabric_01.tres",
+"use_external/path": "uid://b8mea8emok0fs"
+},
+"Fabric_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Fabric_02.tres",
+"use_external/path": "uid://16j6ggyql8n0"
+},
+"Leather": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Leather.tres",
+"use_external/path": "uid://da2igcmffolu3"
+},
+"Marmol": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Marmol.tres",
+"use_external/path": "uid://cdow36pl05aob"
+},
+"Material.007": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.007.tres",
+"use_external/path": "uid://7jla7hg6a7u7"
+},
+"Material.010": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.010.tres",
+"use_external/path": "uid://bkmp2ct682ccs"
+},
+"Material.012": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.012.tres",
+"use_external/path": "uid://bflkro5qwhdpd"
+},
+"Material.045": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.045.tres",
+"use_external/path": "uid://bgfgd7wnprfgg"
+},
+"Material.052": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.052.tres",
+"use_external/path": "uid://cmhmb8ptvgmqx"
+},
+"Material.053": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.053.tres",
+"use_external/path": "uid://dfdbqu4230nj"
+},
+"Material.054": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.054.tres",
+"use_external/path": "uid://cdhjfnbrn8i4u"
+},
+"Material.058": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.058.tres",
+"use_external/path": "uid://b5e3uuofeolwr"
+},
+"Material.059": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.059.tres",
+"use_external/path": "uid://b73itx71tq534"
+},
+"Material.060": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.060.tres",
+"use_external/path": "uid://dc2r1y5hnni48"
+},
+"Material.091": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.091.tres",
+"use_external/path": "uid://bnywcgs1fjhxr"
+},
+"Material.104": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.104.tres",
+"use_external/path": "uid://clxdjnwc2wx7p"
+},
+"Material.106": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.106.tres",
+"use_external/path": "uid://cty4rjum06vtu"
+},
+"Material.107": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.107.tres",
+"use_external/path": "uid://bjmtnogfxt1ta"
+},
+"Material.109": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.109.tres",
+"use_external/path": "uid://bvme6rbg45or"
+},
+"Material.110": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.110.tres",
+"use_external/path": "uid://dpugq82auwa2l"
+},
+"Material.121": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.121.tres",
+"use_external/path": "uid://cqp1q6cjq078p"
+},
+"Material.124": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.124.tres",
+"use_external/path": "uid://diywk2gdwlo01"
+},
+"Material.130": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.130.tres",
+"use_external/path": "uid://ch3sqp4wqbk1c"
+},
+"Material.132": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.132.tres",
+"use_external/path": "uid://budtnaml2at8"
+},
+"Material.155": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.155.tres",
+"use_external/path": "uid://4wad5tt4b3lg"
+},
+"Material.180": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Material.180.tres",
+"use_external/path": "uid://dcx1yg1x0dstb"
+},
+"Mattress": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Mattress.tres",
+"use_external/path": "uid://cdyg8cxj6edde"
+},
+"Medidor": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Medidor.tres",
+"use_external/path": "uid://jedwrkksho3k"
+},
+"Mesh": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Mesh.tres",
+"use_external/path": "uid://daxtg8amvrsat"
+},
+"Metal": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal.tres",
+"use_external/path": "uid://bwfsytw11hic1"
+},
+"Metal_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_01.tres",
+"use_external/path": "uid://cs31vp40t4f1r"
+},
+"Metal_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_02.tres",
+"use_external/path": "uid://c1gfdguvsaqvl"
+},
+"Metal_03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_03.tres",
+"use_external/path": "uid://c5byg4vy23bt5"
+},
+"Metal_04": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_04.tres",
+"use_external/path": "uid://1l0kr3pk1wmi"
+},
+"Metal_05": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_05.tres",
+"use_external/path": "uid://dpx6218q21uww"
+},
+"Metal_06": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_06.tres",
+"use_external/path": "uid://bv1qskygnok04"
+},
+"Metal_07": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_07.tres",
+"use_external/path": "uid://bxv8bw3lybxj5"
+},
+"Metal_08": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_08.tres",
+"use_external/path": "uid://c4act5ip5n86d"
+},
+"Metal_09": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_09.tres",
+"use_external/path": "uid://dusdv8gijpcub"
+},
+"Metal_10": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_10.tres",
+"use_external/path": "uid://c50rje3m1ydw1"
+},
+"Metal_11": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_11.tres",
+"use_external/path": "uid://ueb17gaqo8vu"
+},
+"Metal_12": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_12.tres",
+"use_external/path": "uid://k7ugqjxx7lvl"
+},
+"Metal_13": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_13.tres",
+"use_external/path": "uid://b3iplkyp8fu1f"
+},
+"Metal_14": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_14.tres",
+"use_external/path": "uid://dek8pl0eopyj2"
+},
+"Metal_15": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_15.tres",
+"use_external/path": "uid://cole24trwh463"
+},
+"Metal_16": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Metal_16.tres",
+"use_external/path": "uid://62wgw3l77cy6"
+},
+"Micro": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Micro.tres",
+"use_external/path": "uid://djlkvu43uikm6"
+},
+"Paper": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Paper.tres",
+"use_external/path": "uid://bpurr8wcsxaql"
+},
+"Plants": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plants.tres",
+"use_external/path": "uid://dph6fctyn6xtp"
+},
+"Plants_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plants_01.tres",
+"use_external/path": "uid://myursnnuhmhh"
+},
+"Plants_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plants_02.tres",
+"use_external/path": "uid://cdy080qyrwxj3"
+},
+"Plants_03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plants_03.tres",
+"use_external/path": "uid://pn1cujrlf54s"
+},
+"Plants_04": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plants_04.tres",
+"use_external/path": "uid://8ywv85a3su8"
+},
+"Plants_05": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plants_05.tres",
+"use_external/path": "uid://57ux2pw4nmti"
+},
+"Plants_06": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plants_06.tres",
+"use_external/path": "uid://cmqryiuaing72"
+},
+"Plants_07": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plants_07.tres",
+"use_external/path": "uid://bhe7fo57843wy"
+},
+"Plants_08": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plants_08.tres",
+"use_external/path": "uid://betbsjijs01w3"
+},
+"Plants_09": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plants_09.tres",
+"use_external/path": "uid://bpi0p366vhsvt"
+},
+"Plastic": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plastic.tres",
+"use_external/path": "uid://tiasiaipuisf"
+},
+"Plastic_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plastic_01.tres",
+"use_external/path": "uid://d2jkgo8inc7ua"
+},
+"Plastic_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plastic_02.tres",
+"use_external/path": "uid://bimuk6lylcwj"
+},
+"Plastic_03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plastic_03.tres",
+"use_external/path": "uid://bqc3mav3tblnr"
+},
+"Plastic_04": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Plastic_04.tres",
+"use_external/path": "uid://dba53e0ypay2t"
+},
+"Se (5)": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Se (5).tres",
+"use_external/path": "uid://blweom7vkgw1f"
+},
+"Shelf_Store": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store.tres",
+"use_external/path": "uid://c1tdyv5x0oter"
+},
+"Shelf_Store_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_01.tres",
+"use_external/path": "uid://dbkoxoy8hpmub"
+},
+"Shelf_Store_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_02.tres",
+"use_external/path": "uid://caqg0idem8t8p"
+},
+"Shelf_Store_03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_03.tres",
+"use_external/path": "uid://edbxhudraw7d"
+},
+"Shelf_Store_04": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_04.tres",
+"use_external/path": "uid://bxuv57s6113yl"
+},
+"Shelf_Store_05": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_05.tres",
+"use_external/path": "uid://c10gyvoebntap"
+},
+"Shelf_Store_06": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_06.tres",
+"use_external/path": "uid://dl1tyye5vqk8k"
+},
+"Shelf_Store_07": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_07.tres",
+"use_external/path": "uid://bb171jyx78rla"
+},
+"Shelf_Store_08": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_08.tres",
+"use_external/path": "uid://bf8visxbssae4"
+},
+"Shelf_Store_09": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_09.tres",
+"use_external/path": "uid://s0c1clgmxpy"
+},
+"Shelf_Store_10": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_10.tres",
+"use_external/path": "uid://dhxctj6kinw3r"
+},
+"Shelf_Store_11": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_11.tres",
+"use_external/path": "uid://b5431tws8cvob"
+},
+"Shelf_Store_12": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_12.tres",
+"use_external/path": "uid://rbu8fdj8tew6"
+},
+"Shelf_Store_13": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_13.tres",
+"use_external/path": "uid://c67rlopo5ifjk"
+},
+"Shelf_Store_14": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_14.tres",
+"use_external/path": "uid://bf85dqueax5f"
+},
+"Shelf_Store_15": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_15.tres",
+"use_external/path": "uid://c13sqgtgj8qyf"
+},
+"Shelf_Store_16": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Shelf_Store_16.tres",
+"use_external/path": "uid://bjpbc3ji8aoyc"
+},
+"TV": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/TV.tres",
+"use_external/path": "uid://de1t6v00m6sy"
+},
+"TV_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/TV_01.tres",
+"use_external/path": "uid://dqhnsprk8t81v"
+},
+"TV_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/TV_02.tres",
+"use_external/path": "uid://cun26h1qlxrxk"
+},
+"TV_03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/TV_03.tres",
+"use_external/path": "uid://4oi41v04fchi"
+},
+"TV_04": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/TV_04.tres",
+"use_external/path": "uid://dvjrqwuyab7ep"
+},
+"TV_05": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/TV_05.tres",
+"use_external/path": "uid://b6cetjq57nblk"
+},
+"TV_06": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/TV_06.tres",
+"use_external/path": "uid://c82gutku7xocc"
+},
+"Tiles": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Tiles.tres",
+"use_external/path": "uid://c23absswbdmk1"
+},
+"Tiles_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Tiles_01.tres",
+"use_external/path": "uid://i5fak2jw8o64"
+},
+"Tiles_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Tiles_02.tres",
+"use_external/path": "uid://b2p4y3xoa68mn"
+},
+"Trash": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Trash.tres",
+"use_external/path": "uid://g8xgj4f401wv"
+},
+"Trash_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Trash_01.tres",
+"use_external/path": "uid://re4b3fcfy3hc"
+},
+"Trash_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Trash_02.tres",
+"use_external/path": "uid://d3ttdg6le4vp"
+},
+"Trash_03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Trash_03.tres",
+"use_external/path": "uid://clavgpjwkwed4"
+},
+"Trash_04": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Trash_04.tres",
+"use_external/path": "uid://c67e5066dr8ls"
+},
+"Trash_05": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Trash_05.tres",
+"use_external/path": "uid://bso252vppyeje"
+},
+"Trash_06": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Trash_06.tres",
+"use_external/path": "uid://e6hqy3j5nauc"
+},
+"Tree": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Tree.tres",
+"use_external/path": "uid://cdbgwi002venu"
+},
+"Wire": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wire.tres",
+"use_external/path": "uid://chhqkinwqvbc8"
+},
+"Wire2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wire2.tres",
+"use_external/path": "uid://bo5rye54yi4wp"
+},
+"Wire3": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wire3.tres",
+"use_external/path": "uid://chwpxiwlmedyo"
+},
+"Wood": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wood.tres",
+"use_external/path": "uid://dy1c4hhon5fsn"
+},
+"Wood_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wood_01.tres",
+"use_external/path": "uid://c38x3qq1o5lmp"
+},
+"Wood_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wood_02.tres",
+"use_external/path": "uid://s2ahmhel2gb3"
+},
+"Wood_03": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wood_03.tres",
+"use_external/path": "uid://lickrrtgup8q"
+},
+"Wood_04": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wood_04.tres",
+"use_external/path": "uid://blm60fy2r8vxf"
+},
+"Wood_05": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wood_05.tres",
+"use_external/path": "uid://mx3csgvqs5jv"
+},
+"Wood_06": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wood_06.tres",
+"use_external/path": "uid://cwejx0m7vhirv"
+},
+"Wood_07": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wood_07.tres",
+"use_external/path": "uid://12cbmt6dr07s"
+},
+"Wood_08": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wood_08.tres",
+"use_external/path": "uid://dwskuflc6o4eg"
+},
+"Wood_09": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wood_09.tres",
+"use_external/path": "uid://d45p8avc80pe"
+},
+"Wood_10": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wood_10.tres",
+"use_external/path": "uid://2ibdafduixbu"
+},
+"Wood_12": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wood_12.tres",
+"use_external/path": "uid://lb5odisaixdc"
+},
+"Wood_13": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wood_13.tres",
+"use_external/path": "uid://ccph005hpxbm1"
+},
+"Wood_14": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/Wood_14.tres",
+"use_external/path": "uid://bjvslyqx0s1tb"
+},
+"bottles": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/bottles.tres",
+"use_external/path": "uid://egqtyq0o3c8v"
+},
+"brick": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/brick.tres",
+"use_external/path": "uid://bl23bx480u42a"
+},
+"brick_01": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/brick_01.tres",
+"use_external/path": "uid://bygkb2gxv1n2t"
+},
+"brick_02": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/brick_02.tres",
+"use_external/path": "uid://x4q4w5clx7no"
+},
+"ceiling": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/psx pack 2/materials/ceiling.tres",
+"use_external/path": "uid://d1h45iyx7282w"
+}
+}
+}

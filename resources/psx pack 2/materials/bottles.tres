@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://egqtyq0o3c8v"]
+
+[ext_resource type="Texture2D" uid="uid://ls8do70onoqn" path="res://resources/psx pack 2/bottles.png" id="1_2v8x1"]
+
+[resource]
+resource_name = "bottles"
+cull_mode = 2
+albedo_texture = ExtResource("1_2v8x1")
+roughness = 0.07647059

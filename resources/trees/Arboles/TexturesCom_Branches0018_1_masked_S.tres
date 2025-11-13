@@ -1,0 +1,35 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://va0kght3yov3"]
+
+[ext_resource type="Texture2D" uid="uid://bxyauqwky8tr2" path="res://resources/trees/Arboles/R2.png" id="1_n8wp6"]
+[ext_resource type="Texture2D" uid="uid://cfj8783y6ihxf" path="res://resources/rocks/Rocas/R.jpg" id="2_7uson"]
+[ext_resource type="Texture2D" uid="uid://dxnv5gxej6hjd" path="res://resources/textures/Concrete044D_1K-JPG_NormalDX.jpg" id="3_r8vwa"]
+[ext_resource type="Texture2D" uid="uid://b70ecgjbe45a1" path="res://resources/textures/111-concrete-bare-clean-texture-seamless.jpg" id="4_r8vwa"]
+
+[resource]
+resource_name = "TexturesCom_Branches0018_1_masked_S"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+depth_draw_mode = 1
+diffuse_mode = 1
+albedo_texture = ExtResource("1_n8wp6")
+roughness_texture = ExtResource("4_r8vwa")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_scale = 7.65
+normal_texture = ExtResource("3_r8vwa")
+ao_enabled = true
+ao_light_affect = 0.6
+ao_texture = ExtResource("2_7uson")
+ao_texture_channel = 4
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 1.0
+subsurf_scatter_texture = ExtResource("1_n8wp6")
+subsurf_scatter_transmittance_texture = ExtResource("1_n8wp6")
+subsurf_scatter_transmittance_depth = 0.384
+subsurf_scatter_transmittance_boost = 0.08
+backlight_enabled = true
+backlight = Color(0.21878138, 0.26557153, 4.813075e-08, 1)
+uv2_scale = Vector3(12.935, 12.935, 12.935)
+texture_filter = 5

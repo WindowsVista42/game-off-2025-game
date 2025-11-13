@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://co7mb4lvmc47n"]
+
+[ext_resource type="PackedScene" uid="uid://dyf5idjcfwlng" path="res://scenes/rocks/individual/rock_5.tscn" id="1_2u0l6"]
+[ext_resource type="PackedScene" uid="uid://bsd7tr4100kg0" path="res://scenes/rocks/individual/rock_7.tscn" id="2_ntlf5"]
+[ext_resource type="PackedScene" uid="uid://cg0ls42xpdac0" path="res://scenes/rocks/individual/rock_8.tscn" id="3_iyguw"]
+
+[node name="Scatter3" type="Node3D"]
+
+[node name="Rock5" parent="." instance=ExtResource("1_2u0l6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21243548, 0.9149749, -0.14822996)
+
+[node name="Rock7" parent="." instance=ExtResource("2_ntlf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0591545, 1.0829659, -1.8172439)
+
+[node name="Rock8" parent="." instance=ExtResource("3_iyguw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3313518, 0.22238302, 1.9032723)

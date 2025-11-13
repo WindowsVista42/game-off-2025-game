@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0gbpy4wpehr2"]
+
+[ext_resource type="PackedScene" uid="uid://bo12mdn2f1rv4" path="res://resources/psx pack 2/scenes/bush.tscn" id="1_5oxks"]
+
+[node name="Bushes2" type="Node3D"]
+
+[node name="Bush6" parent="." instance=ExtResource("1_5oxks")]
+transform = Transform3D(0.84584785, 0.021047123, 0.5330092, -0.01780661, 0.9997787, -0.011220789, -0.5331273, -3.2811835e-09, 0.84603524, 0, 0, 0)
+
+[node name="Bush7" parent="." instance=ExtResource("1_5oxks")]
+transform = Transform3D(0.091655284, 0.021047125, 0.9955686, -0.0019295104, 0.99977875, -0.02095849, -0.9957892, -3.859058e-09, 0.09167555, 0.8488775, -0.017870188, -0.7838135)
+
+[node name="Bush8" parent="." instance=ExtResource("1_5oxks")]
+transform = Transform3D(0.091655284, 0.021047125, 0.9955686, -0.0019295104, 0.99977875, -0.02095849, -0.9957892, -3.859058e-09, 0.09167555, 1.0849384, -0.02283978, 0.06153584)

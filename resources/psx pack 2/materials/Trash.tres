@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://g8xgj4f401wv"]
+
+[ext_resource type="Texture2D" uid="uid://baia2f8rj7p2p" path="res://resources/psx pack 2/Trash.jpg" id="1_jfg2o"]
+
+[resource]
+resource_name = "Trash"
+cull_mode = 2
+albedo_texture = ExtResource("1_jfg2o")
+roughness = 0.07647059

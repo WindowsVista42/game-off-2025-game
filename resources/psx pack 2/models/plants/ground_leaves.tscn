@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=4 uid="uid://c6vp3nx7jwedp"]
+
+[ext_resource type="Material" uid="uid://b4gsvycr1fq8p" path="res://resources/psx pack 2/materials/Branch.tres" id="1_ighfl"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_g3ica"]
+_surfaces = [{
+"aabb": AABB(-1.079533, -0.940145, -1.734283, 2.133446, 1.5147198, 3.521389),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAACAAEABAAFAAIABgABAAAABgAEAAEABgAAAAcACAAGAAcABgAJAAQACAAKAAYACgAJAAYACgALAAkADAANAA4ADAAOAA8AEAANAAwAEAAMABEAEgAOAA0AEAASAA0AEgATAA4AEgAUABMAEAAVABIAEgAWABQAFQAWABIAFQAXABYA"),
+"name": "Branch",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAOuFitAAD/f///WK0AAP9/Drj//wAAAAAeaf//AAD//w64WK0AAP//bXz//wAADXlTkU5mAABSECredFcAAAAAZEAAAAAAbfWfw0ZNAAD/f3MyAAAAAP//FgEAAAAA/3/3tv//AAD/f+j+WK0AAAAA97ZYrQAAAAAHaP//AAD///e2WK0AAP//V3v//wAADXk8kE5mAABSEBPddFcAAAAATT8AAAAAbfWIwkZNAAD/f1wxAAAAAP//AAAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4r6po"]
+resource_name = "Plane.007"
+_surfaces = [{
+"aabb": AABB(-1.079533, -0.940145, -1.734283, 2.133446, 1.5147198, 3.521389),
+"attribute_data": PackedByteArray("//+mUv9/plL/fwAA//8AAF97fqL//1KpAACmUgAAAACfhH6iAABSqf/////ih6yd/3///xx4rJ0AAP///38AAP9/plL//6ZS//8AAF97fqL//1KpAACmUgAAAACfhH6iAABSqeKHrJ3//////3///xx4rJ0AAP//"),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAABAAAABAAAAAUABgACAAEABgAHAAIACAAGAAEACAAJAAYACgALAAUACgAMAAsADAAJAA0ADAAOAAkADwAQABEADwARABIAEwARABAAEwAUABEAFQAQAA8AFQAPABYAFQAXABAAFQAYABcAGQAaABQAGQAbABoAGAAbABwAGAAdABsA"),
+"material": ExtResource("1_ighfl"),
+"name": "Branch",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 30,
+"vertex_data": PackedByteArray("AAAOuFitxfr/f///WK3g//9/Drj//xz/AAAeaf//M/INeVORTmYA/lIQKt50Vwry//8OuFituvv//218//+X9Q15U5FOZuj9bfWfw0ZNWvcAAGRAAAAt+g15U5FOZlX+/39zMgAAGf8NeVORTmbD////FgEAAOX7/3/3tv//jgD/f+j+WK0jAAAA97ZYrWsGAAAHaP//hgkNeTyQTmbQAFIQE910V9kP///3tlitdQf//1d7///FBw15PJBOZuQEbfWIwkZN6wINeTyQTmZMBAAATT8AAMAI/39cMQAA8gINeTyQTmZNAv//AAAAABQKNXnBuUtDJwBff1+053U5sNy16ABWPvMP/TrPBzwzQAhJhYDHx3y4x8JJVQmqhN7HTYMrz4mCI8kAUygL/IA3NW/D3f+Uheo/Fo6uPMp9lUuLzbjxKcFn+/G8MvVzNK/9D4lsTaI0Jv740aD5Wy75/kQ1u/9Q3DP7")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_g3ica")
+
+[node name="GroundLeaves" type="Node3D"]
+
+[node name="Plane" type="MeshInstance3D" parent="."]
+mesh = SubResource("ArrayMesh_4r6po")
+skeleton = NodePath("")

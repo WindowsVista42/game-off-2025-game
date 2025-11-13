@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh50p66d1gvxd"]
+
+[ext_resource type="PackedScene" uid="uid://blrw0yqikt41p" path="res://resources/psx pack 2/models.dae" id="1_1hlm3"]
+
+[node name="models" instance=ExtResource("1_1hlm3")]

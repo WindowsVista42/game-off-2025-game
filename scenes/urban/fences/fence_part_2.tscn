@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=4 uid="uid://cyxwn2rj0mvv4"]
+
+[ext_resource type="Material" uid="uid://lickrrtgup8q" path="res://resources/psx pack 2/materials/Wood_03.tres" id="1_4nc5u"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_iacgx"]
+_surfaces = [{
+"aabb": AABB(-0.1138153, -1.182776, -0.1138134, 0.2276306, 2.365552, 0.2276306),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAACAAEAAwACAAQABQABAAAAAwAFAAAABQAGAAEABAABAAYAAwAHAAUAAwAEAAcABwAGAAUABwAEAAYA"),
+"name": "Wood_03",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP//AAD//wAA////////AAAAAAAA//8AAAAA//8AAAAAAAAAAAAAAAAAAP////8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xon4o"]
+resource_name = "Cube.279"
+_surfaces = [{
+"aabb": AABB(-0.1138153, -1.182776, -0.1138134, 0.2276306, 2.365552, 0.2276306),
+"attribute_data": PackedByteArray("Otu2dTrb//////////+2dTrbtnU62///////////tnX//7Z1/////zrb//8627Z1//+2df////862///Otu2df//A6E62wOhOttSrv//Uq462wOh//8Dof//Uq4621Ku"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8AEAARABIAEAASABMAFAAVABYAFAAWABcA"),
+"material": ExtResource("1_4nc5u"),
+"name": "Wood_03",
+"primitive": 3,
+"uv_scale": Vector4(1.1677136, 3.2265186, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP//AAD//wAA////////AAD///////8AAP//AAD//wAAAAAAAP//AAAAAP////8AAAAA//////+/AAAAAP///78AAAAAAAD/vwAA//8AAP+/AAD//wAA//8AAAAAAAD/////AAAAAP///////wAA//8AAAAA//8AAP//AAD//wAA//8AAAAAAAAAAAAAAAAAAP//////////AAD///////8AAP//AAD///////8AAP///7//f/+//3//v/9//7//f/9//3//f/9//3//f/9//3//f////3////9/////f////3////9/////f////3////9//z//f/8//3//P/9//z//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_iacgx")
+
+[node name="FencePart2" type="Node3D"]
+
+[node name="V5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0.7095075, 0.07173884)
+mesh = SubResource("ArrayMesh_xon4o")
+skeleton = NodePath("")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.35999995, 0, 0, 0, 0.35999995, 0, 0, 0, 0.35999995, -0.00036199053, 0.7103996, 0.06860711)
+visible = false
+use_collision = true
+size = Vector3(0.34921265, 3.9305573, 0.36627197)

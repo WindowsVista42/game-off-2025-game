@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://njgkfwxlfh81"]
+
+[ext_resource type="PackedScene" uid="uid://bo12mdn2f1rv4" path="res://resources/psx pack 2/scenes/bush.tscn" id="1_v74pd"]
+
+[node name="Bushes" type="Node3D"]
+
+[node name="Bush" parent="." instance=ExtResource("1_v74pd")]
+transform = Transform3D(-0.8422659, 0.021047119, -0.53865135, 0.017731195, 0.9997786, 0.011339573, 0.53877074, -1.7734494e-09, -0.8424525, 1.8062911, 0.08611222, -0.05820251)
+
+[node name="Bush2" parent="." instance=ExtResource("1_v74pd")]
+transform = Transform3D(-0.8863063, 0.02104712, 0.46262133, 0.018658321, 0.9997786, -0.009739, -0.46272382, -8.8235186e-10, -0.8865026, 1.4164867, 0.09431835, -1.2585306)
+
+[node name="Bush3" parent="." instance=ExtResource("1_v74pd")]
+transform = Transform3D(0.84584785, 0.021047123, 0.5330092, -0.01780661, 0.9997787, -0.011220789, -0.5331273, -3.2811835e-09, 0.84603524, 1.0053394, 0.34964782, -0.23779064)
+
+[node name="Bush4" parent="." instance=ExtResource("1_v74pd")]
+transform = Transform3D(0.8124837, 0.021047127, -0.5826042, -0.01710423, 0.9997788, 0.012264861, 0.5827333, -4.961873e-09, 0.8126637, 1.3982786, 0.0947015, -0.36298957)
+
+[node name="Bush5" parent="." instance=ExtResource("1_v74pd")]
+transform = Transform3D(0.96575713, 0.055284098, -0.25349006, -0.020330913, 0.9901559, 0.13848728, 0.25865066, -0.12859139, 0.9573738, 0.006861322, 0.12288849, -0.015959507)

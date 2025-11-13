@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1vtodil31rbe"]
+
+[ext_resource type="PackedScene" uid="uid://dlaxvbobe4tu5" path="res://resources/trees/Arboles/Arboles low poy.dae" id="1_4sraj"]
+
+[node name="Arboles low poy" instance=ExtResource("1_4sraj")]
