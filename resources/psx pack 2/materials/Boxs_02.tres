@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://5x30p0gl5lkn"]
+
+[ext_resource type="Texture2D" uid="uid://b0wlxcwjalen1" path="res://resources/psx pack 2/Boxs_02.jpg" id="1_e5o7d"]
+
+[resource]
+resource_name = "Boxs_02"
+cull_mode = 2
+albedo_texture = ExtResource("1_e5o7d")
+roughness = 0.07647059

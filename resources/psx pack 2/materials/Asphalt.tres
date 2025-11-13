@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://8qfyjf3w2ogv"]
+
+[ext_resource type="Texture2D" uid="uid://phmjve7jwekx" path="res://resources/psx pack 2/Asphalt.png" id="1_wdadd"]
+
+[resource]
+resource_name = "Asphalt"
+cull_mode = 2
+albedo_texture = ExtResource("1_wdadd")
+roughness = 0.07647059

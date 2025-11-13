@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=4 uid="uid://wlfu7pfcaugm"]
+
+[ext_resource type="Material" uid="uid://dph6fctyn6xtp" path="res://resources/psx pack 2/materials/Plants.tres" id="1_gdpgy"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2337o"]
+_surfaces = [{
+"aabb": AABB(-0.4340973, -0.1145381, -0.401907, 0.8838616, 1.9835861, 0.7752476),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("BgAAAAEAAQAAAAYAAQAGAAIABgABAAIABwADAAQABAADAAcABAAHAAUABwAEAAUA"),
+"lods": [0.39127195, PackedByteArray("AAABAAIAAQAAAAIAAwAEAAUABAADAAUA")],
+"name": "Plants",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AACoBW6JAADRH///bokAAP//VvpuiQAAdnuoAgAAAAB2e2X9AAAAAHZ7Zf3//wAALeAAAG6JAAB2e6gC//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vqpt7"]
+resource_name = "Plane.012"
+_surfaces = [{
+"aabb": AABB(-0.4340973, -0.1145381, -0.401907, 0.8838616, 1.9835861, 0.7752476),
+"attribute_data": PackedByteArray("my3//5stAAAq1AAAmy0AAJst//8q1AAAmy3//5stAAAq1AAAmy0AAJst//8q1AAAKtT//yrU//8q1P//KtT//w=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("DAAAAAEADAABAAIAAwAEAA0AAwANAAUADgAGAAcADgAHAAgACQAKAA8ACQAPAAsA"),
+"lods": [0.39127195, PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsA")],
+"material": ExtResource("1_gdpgy"),
+"name": "Plants",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AACoBW6JTYLRH///bolNgv//VvpuiU2C0R///26JAAAAAKgFbokAAP//VvpuiQAAdnuoAgAA/792e2X9AAD/v3Z7Zf3///+/dntl/QAAAAB2e6gCAAAAAHZ7Zf3//wAALeAAAG6JTYIt4AAAbokAAHZ7qAL///+/dnuoAv//AAD/f/9//3//f/9//395/Hl8efx5fHn8eXz/f////3////9/////v/9//7//f/+//3//f/9/efx5fP9/////v/9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_2337o")
+
+[node name="Plants5" type="Node3D"]
+
+[node name="Ar5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.024870038, 0)
+mesh = SubResource("ArrayMesh_vqpt7")
+skeleton = NodePath("")

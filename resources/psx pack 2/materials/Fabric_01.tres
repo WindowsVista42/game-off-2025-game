@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b8mea8emok0fs"]
+
+[ext_resource type="Texture2D" uid="uid://dmv0y34no5ago" path="res://resources/psx pack 2/Fabric_01.jpg" id="1_hto4r"]
+
+[resource]
+resource_name = "Fabric_01"
+cull_mode = 2
+albedo_texture = ExtResource("1_hto4r")
+roughness = 0.07647059

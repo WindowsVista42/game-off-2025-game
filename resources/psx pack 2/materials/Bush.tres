@@ -1,0 +1,24 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dem8k1clsyt38"]
+
+[ext_resource type="Texture2D" uid="uid://cxb1q4ed0covc" path="res://resources/psx pack 2/Bush.png" id="1_puc0l"]
+[ext_resource type="Texture2D" uid="uid://dxnv5gxej6hjd" path="res://resources/textures/Concrete044D_1K-JPG_NormalDX.jpg" id="2_57jwk"]
+
+[resource]
+resource_name = "Bush"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+diffuse_mode = 1
+albedo_color = Color(0.48526335, 0.49, 0.4851, 1)
+albedo_texture = ExtResource("1_puc0l")
+metallic_specular = 0.25
+roughness = 0.44
+roughness_texture_channel = 4
+normal_enabled = true
+normal_scale = 6.39
+normal_texture = ExtResource("2_57jwk")
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 1.0
+subsurf_scatter_texture = ExtResource("1_puc0l")
+subsurf_scatter_transmittance_boost = 0.17

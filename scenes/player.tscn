@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://l2g6f5m8d1oe" path="res://scripts/camera_3d.gd" id="2_qhqgy"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_g2els"]
-height = 1.1287689
+height = 1.2615795
 radius = 0.21582031
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_g2els"]
@@ -17,7 +17,7 @@ axis_lock_angular_z = true
 script = ExtResource("1_g2els")
 
 [node name="BodyCollider" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1120615, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1784668, 0)
 shape = SubResource("CylinderShape3D_g2els")
 
 [node name="FloorCollider" type="CollisionShape3D" parent="."]
@@ -25,7 +25,7 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0
 shape = SubResource("SeparationRayShape3D_g2els")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5645642, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7069571, 0)
 script = ExtResource("2_qhqgy")
 MOUSE_SENS = 0.008
 

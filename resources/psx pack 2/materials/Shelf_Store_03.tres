@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://edbxhudraw7d"]
+
+[ext_resource type="Texture2D" uid="uid://ndg2euenu1fc" path="res://resources/psx pack 2/Shelf_Store_03.png" id="1_gr0au"]
+
+[resource]
+resource_name = "Shelf_Store_03"
+cull_mode = 2
+albedo_texture = ExtResource("1_gr0au")
+roughness = 0.07647059

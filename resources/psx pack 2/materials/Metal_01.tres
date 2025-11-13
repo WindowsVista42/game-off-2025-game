@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cs31vp40t4f1r"]
+
+[ext_resource type="Texture2D" uid="uid://cyrs5kqk0hykh" path="res://resources/psx pack 2/Metal_01.jpg" id="1_y5d3x"]
+
+[resource]
+resource_name = "Metal_01"
+cull_mode = 2
+albedo_texture = ExtResource("1_y5d3x")
+roughness = 0.07647059

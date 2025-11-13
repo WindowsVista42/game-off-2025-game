@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b4gq2c8kikm8d"]
+
+[ext_resource type="Texture2D" uid="uid://ck63jqyvo6e70" path="res://resources/psx pack 2/Bush_03.png" id="1_tuytd"]
+
+[resource]
+resource_name = "Bush_03"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_tuytd")
+roughness = 0.07647059

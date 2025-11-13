@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bimuk6lylcwj"]
+
+[ext_resource type="Texture2D" uid="uid://ut20ovn3xatk" path="res://resources/psx pack 2/Plastic_02.jpg" id="1_et7ok"]
+
+[resource]
+resource_name = "Plastic_02"
+cull_mode = 2
+albedo_texture = ExtResource("1_et7ok")
+roughness = 0.07647059

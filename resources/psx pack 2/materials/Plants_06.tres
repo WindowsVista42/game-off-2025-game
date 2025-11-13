@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cmqryiuaing72"]
+
+[ext_resource type="Texture2D" uid="uid://deiul50avwkws" path="res://resources/psx pack 2/Plants_06.png" id="1_dqyfg"]
+
+[resource]
+resource_name = "Plants_06"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_dqyfg")
+roughness = 0.07647059

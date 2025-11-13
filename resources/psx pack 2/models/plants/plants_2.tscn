@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=4 uid="uid://b88m8l7jtv83q"]
+
+[ext_resource type="Material" uid="uid://pn1cujrlf54s" path="res://resources/psx pack 2/materials/Plants_03.tres" id="1_mrf10"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jhaf3"]
+_surfaces = [{
+"aabb": AABB(-1.036594, -0.04509699, -1.106747, 1.9806591, 2.826278, 2.010882),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8A"),
+"name": "Plants_03",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("3YsAAP//AADdiwAAAAAAAN2L//8AAAAA3Yv/////AADdi///AAAAAN2LAAAAAAAA3YsAAP//AADdi/////8AAP//AAD9mQAAAAAAAP2ZAAAAAP///ZkAAP/////9mQAAAAD+//2ZAAAAAAAA/ZkAAP7/AAD9mQAA/v/+//2ZAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4qww8"]
+resource_name = "Plane.003"
+_surfaces = [{
+"aabb": AABB(-1.036594, -0.04509699, -1.106747, 1.9806591, 2.826278, 2.010882),
+"attribute_data": PackedByteArray("JtP//wId//8CHQAAJtMAAAIdAAACHf//JtP//ybTAABh0f//+h3///odAABh0QAA+h0AAPod//9h0f//YdEAAA=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8A"),
+"material": ExtResource("1_mrf10"),
+"name": "Plants_03",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("3YsAAP///7/diwAAAAD/v92L//8AAP+/3Yv//////7/di///AAAAAN2LAAAAAAAA3YsAAP//AADdi/////8AAP//AAD9mQCAAAAAAP2ZAIAAAP///ZkAgP/////9mQCAAAD+//2ZAAAAAAAA/ZkAAP7/AAD9mQAA/v/+//2ZAAD/f////3////9/////f////7//f/+//3//v/9//7//f/9/////f////3////9///////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jhaf3")
+
+[node name="Plants2" type="Node3D"]
+
+[node name="Ar2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01636684, 0)
+mesh = SubResource("ArrayMesh_4qww8")
+skeleton = NodePath("")

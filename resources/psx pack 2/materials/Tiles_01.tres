@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://i5fak2jw8o64"]
+
+[ext_resource type="Texture2D" uid="uid://bavkqmi601cxu" path="res://resources/psx pack 2/Tiles_01.jpg" id="1_tshpn"]
+
+[resource]
+resource_name = "Tiles_01"
+cull_mode = 2
+albedo_texture = ExtResource("1_tshpn")
+roughness = 0.07647059

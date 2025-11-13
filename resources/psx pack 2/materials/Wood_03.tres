@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://lickrrtgup8q"]
+
+[ext_resource type="Texture2D" uid="uid://cglqy255nrhrs" path="res://resources/psx pack 2/Wood_03.jpg" id="1_cgkvr"]
+[ext_resource type="Texture2D" uid="uid://dxnv5gxej6hjd" path="res://resources/textures/Concrete044D_1K-JPG_NormalDX.jpg" id="2_uvuv7"]
+
+[resource]
+resource_name = "Wood_03"
+cull_mode = 2
+specular_mode = 2
+albedo_color = Color(0.78, 0.68731, 0.60059994, 1)
+albedo_texture = ExtResource("1_cgkvr")
+normal_enabled = true
+normal_scale = 0.59
+normal_texture = ExtResource("2_uvuv7")
