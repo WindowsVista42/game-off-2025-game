@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4 uid="uid://bjbpyv454ahfu"]
 
-[ext_resource type="Material" uid="uid://va0kght3yov3" path="res://resources/trees/Arboles/TexturesCom_Branches0018_1_masked_S.tres" id="1_e8foj"]
+[ext_resource type="Material" uid="uid://gudyln6nwdf0" path="res://scenes/foliage/trees/tree_3.tres" id="1_duwfa"]
 [ext_resource type="Material" uid="uid://ck75kqlvg0enn" path="res://resources/trees/Arboles/Material.009.tres" id="2_7qehr"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_v3d6r"]
@@ -35,7 +35,7 @@ _surfaces = [{
 "format": 34896613399,
 "index_count": 168,
 "index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8AEAARABIAEAASABMAFAAVABYAFAAWABcAGAAZABoAGAAaABsAHAAdAB4AHAAeAB8AIAAhACIAIAAiACMAJAAlACYAJAAmACcAKAApACoAKAAqACsALAAtAC4ALAAuAC8AMAAxADIAMAAyADMANAA1ADYANAA2ADcAOAA5ADoAOAA6ADsAPAA9AD4APAA+AD8AQABBAEIAQABCAEMARABFAEYARABGAEcASABJAEoASABKAEsATABNAE4ATABOAE8AUABRAFIAUABSAFMAVABVAFYAVABWAFcAWABZAFoAWABaAFsAXABdAF4AXABeAF8AYABhAGIAYABiAGMAZABlAGYAZABmAGcAaABpAGoAaABqAGsAbABtAG4AbABuAG8A"),
-"material": ExtResource("1_e8foj"),
+"material": ExtResource("1_duwfa"),
 "name": "TexturesCom_Branches0018_1_masked_S",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),

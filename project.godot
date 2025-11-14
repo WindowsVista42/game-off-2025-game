@@ -15,6 +15,14 @@ run/main_scene="uid://clehasow6b56h"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
+
+[debug]
+
+settings/stdout/print_gpu_profile=true
+
 [display]
 
 window/size/viewport_width=320
@@ -70,7 +78,20 @@ common/physics_interpolation=true
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=2
+textures/canvas_textures/default_texture_repeat=2
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=4
 lights_and_shadows/directional_shadow/16_bits=false
+camera/depth_of_field/depth_of_field_bokeh_quality=2
+environment/ssao/quality=3
+environment/ssil/quality=3
 anti_aliasing/quality/msaa_3d=2
+anti_aliasing/screen_space_roughness_limiter/enabled=false
+textures/default_filters/texture_mipmap_bias=-0.19999999999999996
+textures/decals/filter=5
+textures/light_projectors/filter=5
+environment/volumetric_fog/volume_size=192
+environment/volumetric_fog/volume_depth=192
 limits/cluster_builder/max_clustered_elements=512.0
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+anti_aliasing/quality/use_debanding=true

@@ -1,0 +1,116 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://gudyln6nwdf0"]
+
+[ext_resource type="Texture2D" uid="uid://bxyauqwky8tr2" path="res://resources/trees/Arboles/R2.png" id="1_f8m3a"]
+[ext_resource type="Texture2D" uid="uid://cfj8783y6ihxf" path="res://resources/rocks/Rocas/R.jpg" id="2_30o8m"]
+[ext_resource type="Texture2D" uid="uid://dxnv5gxej6hjd" path="res://resources/textures/Concrete044D_1K-JPG_NormalDX.jpg" id="3_yhuk4"]
+[ext_resource type="Texture2D" uid="uid://b70ecgjbe45a1" path="res://resources/textures/111-concrete-bare-clean-texture-seamless.jpg" id="4_c2moq"]
+
+[sub_resource type="Shader" id="Shader_wk64w"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.5.1.stable's StandardMaterial3D.
+
+shader_type spatial;
+render_mode blend_mix, depth_draw_always, cull_disabled, diffuse_lambert, specular_schlick_ggx;
+
+uniform vec4 albedo : source_color;
+uniform sampler2D texture_albedo : source_color, filter_linear_mipmap_anisotropic, repeat_enable;
+uniform float alpha_scissor_threshold : hint_range(0.0, 1.0, 0.001);
+uniform ivec2 albedo_texture_size;
+uniform float point_size : hint_range(0.1, 128.0, 0.1);
+
+uniform float roughness : hint_range(0.0, 1.0);
+uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap_anisotropic, repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_gray, filter_linear_mipmap_anisotropic, repeat_enable;
+
+uniform float specular : hint_range(0.0, 1.0, 0.01);
+uniform float metallic : hint_range(0.0, 1.0, 0.01);
+
+uniform sampler2D texture_normal : hint_roughness_normal, filter_linear_mipmap_anisotropic, repeat_enable;
+uniform float normal_scale : hint_range(-16.0, 16.0);
+
+uniform sampler2D texture_ambient_occlusion : hint_default_white, filter_linear_mipmap_anisotropic, repeat_enable;
+uniform vec4 ao_texture_channel;
+uniform float ao_light_affect : hint_range(0.0, 1.0, 0.01);
+
+uniform float subsurface_scattering_strength : hint_range(0.0, 1.0, 0.01);
+uniform sampler2D texture_subsurface_scattering : hint_default_white, filter_linear_mipmap_anisotropic, repeat_enable;
+
+uniform vec4 backlight : source_color;
+uniform sampler2D texture_backlight : hint_default_black, filter_linear_mipmap_anisotropic, repeat_enable;
+
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
+
+void vertex() {
+	UV = UV * uv1_scale.xy + uv1_offset.xy;
+	
+	// https://terrain3d.readthedocs.io/en/stable/docs/tips_environment.html#foliage-material
+	NORMAL = normalize(VERTEX); // Recalculate vertex normals from model origin
+	TANGENT = normalize(cross(NORMAL, vec3(0., 0., 1.)));
+	BINORMAL = normalize(cross(NORMAL, TANGENT));
+}
+
+void fragment() {
+	NORMAL = !FRONT_FACING ? -NORMAL : NORMAL;
+	
+	vec2 base_uv = UV;
+
+	vec4 albedo_tex = texture(texture_albedo, base_uv);
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+
+	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	SPECULAR = specular;
+
+	vec4 roughness_texture_channel = vec4(0.333333, 0.333333, 0.333333, 0.0);
+	float roughness_tex = dot(texture(texture_roughness, base_uv), roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+
+	// Normal Map: Enabled
+	NORMAL_MAP = texture(texture_normal, base_uv).rgb;
+	NORMAL_MAP_DEPTH = normal_scale;
+	ALPHA *= albedo.a * albedo_tex.a;
+	ALPHA_SCISSOR_THRESHOLD = alpha_scissor_threshold;
+
+	// Ambient Occlusion: Enabled
+	AO = dot(texture(texture_ambient_occlusion, base_uv), ao_texture_channel);
+	AO_LIGHT_AFFECT = ao_light_affect;
+
+	// Subsurface Scattering: Enabled
+	float sss_tex = texture(texture_subsurface_scattering, base_uv).r;
+	SSS_STRENGTH = subsurface_scattering_strength * sss_tex;
+
+	// Backlight: Enabled
+	vec3 backlight_tex = texture(texture_backlight, base_uv).rgb;
+	BACKLIGHT = (backlight.rgb + backlight_tex);
+}
+"
+
+[resource]
+resource_name = "TexturesCom_Branches0018_1_masked_S"
+render_priority = 0
+shader = SubResource("Shader_wk64w")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("1_f8m3a")
+shader_parameter/alpha_scissor_threshold = 0.5
+shader_parameter/albedo_texture_size = Vector2i(191, 256)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/texture_roughness = ExtResource("4_c2moq")
+shader_parameter/specular = 0.249999994412
+shader_parameter/metallic = 0.0
+shader_parameter/texture_normal = ExtResource("3_yhuk4")
+shader_parameter/normal_scale = 7.65
+shader_parameter/texture_ambient_occlusion = ExtResource("2_30o8m")
+shader_parameter/ao_texture_channel = Vector4(0.3333333, 0.3333333, 0.3333333, 0)
+shader_parameter/ao_light_affect = 0.6
+shader_parameter/subsurface_scattering_strength = 1.0
+shader_parameter/texture_subsurface_scattering = ExtResource("1_f8m3a")
+shader_parameter/backlight = Color(0.21878138, 0.26557153, 4.813075e-08, 1)
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(12.935, 12.935, 12.935)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)

@@ -26,6 +26,8 @@ shape = SubResource("SeparationRayShape3D_g2els")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7069571, 0)
+near = 0.01
+far = 10000.0
 script = ExtResource("2_qhqgy")
 MOUSE_SENS = 0.008
 
