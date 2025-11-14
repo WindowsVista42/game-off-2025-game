@@ -208,7 +208,7 @@ shadow_mesh = SubResource("ArrayMesh_1lwfg")
 [node name="Level 1" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.582294, -0.22895679, 0.7800722, 0.06446244, 0.9435, 0.32504272, -0.8104188, 0.23955554, -0.5346352, 0, 0, 0)
+transform = Transform3D(-0.5077971, 0.5031556, 0.69926894, 0.85327625, 0.1820271, 0.4886578, 0.11858508, 0.8448081, -0.5217632, 0, 0, 0)
 light_color = Color(0.79, 0.7877617, 0.7821, 1)
 light_energy = 3.0
 light_volumetric_fog_energy = 0.2
