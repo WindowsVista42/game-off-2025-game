@@ -1616,28 +1616,30 @@ transform = Transform3D(-0.90724975, 0, 0.42059243, 0, 1, 0, -0.42059243, 0, -0.
 [node name="Bushes12" parent="." instance=ExtResource("24_3oqy1")]
 transform = Transform3D(3.9187422, 0.038197905, -0.78747296, -0.07014674, 0.99424946, 0.42257345, 0.799086, -0.10004486, 3.8988867, 11.228166, -5.6555176, 49.156624)
 
-[node name="FencePart2" parent="." instance=ExtResource("30_gqmnx")]
+[node name="FenceParts" type="Node3D" parent="."]
+
+[node name="FencePart2" parent="FenceParts" instance=ExtResource("30_gqmnx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.912714, -0.020368338, 15.057292)
 
-[node name="FencePart1" parent="." instance=ExtResource("31_p71k4")]
+[node name="FencePart1" parent="FenceParts" instance=ExtResource("31_p71k4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.897696, -0.053996682, 15.095924)
 
-[node name="FencePart3" parent="." instance=ExtResource("31_p71k4")]
+[node name="FencePart3" parent="FenceParts" instance=ExtResource("31_p71k4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.831253, -0.053996682, 15.095924)
 
-[node name="FencePart4" parent="." instance=ExtResource("31_p71k4")]
+[node name="FencePart4" parent="FenceParts" instance=ExtResource("31_p71k4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.759665, -0.053996682, 15.095924)
 
-[node name="FencePart11" parent="." instance=ExtResource("31_p71k4")]
+[node name="FencePart11" parent="FenceParts" instance=ExtResource("31_p71k4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.684007, -0.053996682, 15.095924)
 
-[node name="FencePart12" parent="." instance=ExtResource("31_p71k4")]
+[node name="FencePart12" parent="FenceParts" instance=ExtResource("31_p71k4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.612065, -0.053996682, 15.095924)
 
-[node name="FencePart13" parent="." instance=ExtResource("31_p71k4")]
+[node name="FencePart13" parent="FenceParts" instance=ExtResource("31_p71k4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.541178, -0.053996682, 15.095924)
 
-[node name="FencePart14" parent="." instance=ExtResource("31_p71k4")]
+[node name="FencePart14" parent="FenceParts" instance=ExtResource("31_p71k4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4739575, -0.053996682, 15.095924)
 
 [node name="Home" parent="." instance=ExtResource("32_p71k4")]
