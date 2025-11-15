@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cph357igblwuv"]
+
+[ext_resource type="PackedScene" uid="uid://d0gbpy4wpehr2" path="res://scenes/foliage/bushes/bushes_2.tscn" id="1_vrn4a"]
+
+[node name="ForestFloor" type="Node3D"]
+
+[node name="Bushes23" parent="." instance=ExtResource("1_vrn4a")]
+transform = Transform3D(7.999333, 0.025826829, -0.0016813597, 0.103321, -1.9995686, 0.1301159, -7.5646676e-07, -0.03253169, -7.998942, -3.7728944, 0, -2.9624088)
+
+[node name="Bushes24" parent="." instance=ExtResource("1_vrn4a")]
+transform = Transform3D(1.5288643, -0.030283464, -3.6960714, 0.0516605, -2.999353, 0.06505796, -3.6959307, -0.054451067, -1.528013, -3.7728944, 0, -2.9624088)
+
+[node name="Bushes25" parent="." instance=ExtResource("1_vrn4a")]
+transform = Transform3D(3.3982933, 0.007181745, -2.1098602, 0.0516605, -2.9993527, 0.065057956, -2.109249, -0.06189046, -3.3976839, -3.7728944, 0, -2.9624088)
+
+[node name="Bushes26" parent="." instance=ExtResource("1_vrn4a")]
+transform = Transform3D(-1.4933169, -0.059732884, -3.709941, 0.05166049, -2.9993525, 0.06505795, -3.7104359, -0.01771973, 1.4940236, -3.7728944, 0, -2.9624088)
