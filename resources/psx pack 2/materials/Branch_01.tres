@@ -1,6 +1,8 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dgcvfec1jgci3"]
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://dgcvfec1jgci3"]
 
 [ext_resource type="Texture2D" uid="uid://c73rrbpwao8wy" path="res://resources/psx pack 2/Branch_01.png" id="1_a1cru"]
+[ext_resource type="Texture2D" uid="uid://dxnv5gxej6hjd" path="res://resources/textures/Concrete044D_1K-JPG_NormalDX.jpg" id="2_pvoc6"]
+[ext_resource type="Texture2D" uid="uid://bxyauqwky8tr2" path="res://resources/trees/Arboles/R2.png" id="3_sa1ix"]
 
 [resource]
 resource_name = "Branch_01"
@@ -9,4 +11,13 @@ alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 cull_mode = 2
 albedo_texture = ExtResource("1_a1cru")
-roughness = 0.07647059
+metallic_specular = 0.25
+roughness = 0.82
+normal_enabled = true
+normal_scale = 7.64
+normal_texture = ExtResource("2_pvoc6")
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 1.0
+subsurf_scatter_texture = ExtResource("3_sa1ix")
+backlight_enabled = true
+backlight = Color(0.4071459, 0.5708871, 0.31845835, 1)

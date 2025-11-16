@@ -1,0 +1,142 @@
+[gd_scene load_steps=8 format=4 uid="uid://cerghmucju2i3"]
+
+[ext_resource type="Texture2D" uid="uid://c73rrbpwao8wy" path="res://resources/psx pack 2/Branch_01.png" id="1_6kpv0"]
+[ext_resource type="Texture2D" uid="uid://dxnv5gxej6hjd" path="res://resources/textures/Concrete044D_1K-JPG_NormalDX.jpg" id="2_ae75o"]
+[ext_resource type="Texture2D" uid="uid://bxyauqwky8tr2" path="res://resources/trees/Arboles/R2.png" id="3_ae75o"]
+
+[sub_resource type="Shader" id="Shader_fmjk6"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.5.1.stable's StandardMaterial3D.
+
+shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_disabled, diffuse_burley, specular_schlick_ggx;
+
+uniform vec4 albedo : source_color;
+uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
+uniform float alpha_scissor_threshold : hint_range(0.0, 1.0, 0.001);
+uniform ivec2 albedo_texture_size;
+uniform float point_size : hint_range(0.1, 128.0, 0.1);
+
+uniform float roughness : hint_range(0.0, 1.0);
+uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap, repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
+
+uniform float specular : hint_range(0.0, 1.0, 0.01);
+uniform float metallic : hint_range(0.0, 1.0, 0.01);
+
+uniform sampler2D texture_normal : hint_roughness_normal, filter_linear_mipmap, repeat_enable;
+uniform float normal_scale : hint_range(-16.0, 16.0);
+
+uniform float subsurface_scattering_strength : hint_range(0.0, 1.0, 0.01);
+uniform sampler2D texture_subsurface_scattering : hint_default_white, filter_linear_mipmap, repeat_enable;
+
+uniform vec4 backlight : source_color;
+uniform sampler2D texture_backlight : hint_default_black, filter_linear_mipmap, repeat_enable;
+
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
+
+void vertex() {
+	UV = UV * uv1_scale.xy + uv1_offset.xy;
+	
+	// https://terrain3d.readthedocs.io/en/stable/docs/tips_environment.html#foliage-material
+	NORMAL = normalize(VERTEX); // Recalculate vertex normals from model origin
+	TANGENT = normalize(cross(NORMAL, vec3(0., 0., 1.)));
+	BINORMAL = normalize(cross(NORMAL, TANGENT));
+}
+
+void fragment() {
+	NORMAL = !FRONT_FACING ? -NORMAL : NORMAL;
+
+	vec2 base_uv = UV;
+
+	vec4 albedo_tex = texture(texture_albedo, base_uv);
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+
+	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	SPECULAR = specular;
+
+	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
+	float roughness_tex = dot(texture(texture_roughness, base_uv), roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+
+	// Normal Map: Enabled
+	NORMAL_MAP = texture(texture_normal, base_uv).rgb;
+	NORMAL_MAP_DEPTH = normal_scale;
+	ALPHA *= albedo.a * albedo_tex.a;
+	ALPHA_SCISSOR_THRESHOLD = alpha_scissor_threshold;
+
+	// Subsurface Scattering: Enabled
+	float sss_tex = texture(texture_subsurface_scattering, base_uv).r;
+	SSS_STRENGTH = subsurface_scattering_strength * sss_tex;
+
+	// Backlight: Enabled
+	vec3 backlight_tex = texture(texture_backlight, base_uv).rgb;
+	BACKLIGHT = (backlight.rgb + backlight_tex);
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vk1nw"]
+resource_name = "Branch_01"
+render_priority = 0
+shader = SubResource("Shader_fmjk6")
+shader_parameter/albedo = Color(0.84032553, 0.84032553, 0.8403255, 1)
+shader_parameter/texture_albedo = ExtResource("1_6kpv0")
+shader_parameter/alpha_scissor_threshold = 0.5
+shader_parameter/albedo_texture_size = Vector2i(256, 343)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.82
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.25
+shader_parameter/metallic = 0.0
+shader_parameter/texture_normal = ExtResource("2_ae75o")
+shader_parameter/normal_scale = 7.64
+shader_parameter/subsurface_scattering_strength = 1.0
+shader_parameter/texture_subsurface_scattering = ExtResource("3_ae75o")
+shader_parameter/backlight = Color(0.4071459, 0.5708871, 0.31845835, 1)
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ae75o"]
+_surfaces = [{
+"aabb": AABB(-1.010834, -0.632378, -1.447998, 2.028019, 1.1347783, 2.872662),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAAACAAMAAQAEAAIABQABAAAAAQAGAAQABQAHAAEACAAGAAEACAABAAcACQAKAAsACQALAAwACgANAAsADgAKAAkACgAPAA0ADgAQAAoAEQAPAAoAEQAKABAA"),
+"name": "Branch_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("AAA6+/9/AAD/f+F8/38AAP9//////wAAAABCVv//AAD//0JW//8AAAAAPRIAAAAA//+jAf9/AAD/f/+OAAAAAP//AfIAAAAA/39b/v//AAD/fz17/38AAAAAlvn/fwAAAACeVP//AAAAAJkQAAAAAP//nlT//wAA/39bjQAAAAD//wAA/38AAP//XfAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fmjk6"]
+resource_name = "Plane.004"
+_surfaces = [{
+"aabb": AABB(-1.010834, -0.632378, -1.447998, 2.028019, 1.1347783, 2.872662),
+"attribute_data": PackedByteArray("////f/9//3//fwAA//////9/////f/9/AAD//wAA/3//f/9//3//fwAA/38AAAAA/38AAP9//3////9//3//f/9/////////AAD///9/////f/9/AAAAAAAA/3//f/9/////f/9/AAD//wAA//////9//3////9/AAD///9//3//f////3//fwAAAAD/fwAA/38AAP///3///wAA/3//f/////////9/AAD///9//38AAP9/AAAAAP9//3//fwAA"),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAWABcAGAAZABoAGwAcAB0AHgAfACAAIQAiACMAJAAlACYAJwAoACkAKgArACwALQAuAC8A"),
+"material": SubResource("ShaderMaterial_vk1nw"),
+"name": "Branch_01",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("AAA6+/9/N/T/f+F8/3839P9//////zf0AAA9EgAAVvH/f/+OAABW8f9/4Xz/f1bx//8B8gAAVO7//6MB/39U7v9/4Xz/f1Tu/3/hfP9/iPP//6MB/3+I8///Qlb//4jz/39b/v//uxD/fz17/3+7EAAAlvn/f7sQ/389e/9/8w3/f1uNAADzDQAAmRAAAPMN//9d8AAAawv/f1uNAABrC/9/PXv/f2sL//+eVP//sA///wAA/3+wD/9/PXv/f7APAAA6+/9/her/f/////+F6gAAQlb//4XqAAA9EgAAI/b/f+F8/38j9gAAOvv/fyP2//8B8gAA+PP/f+F8/3/48/9//44AAPjz/3/hfP9/4fD//0JW///h8P9//////+Hw/39b/v//Uw4AAJb5/39TDgAAnlT//1MO/389e/9/9BEAAJkQAAD0EQAAlvn/f/QR//9d8AAAggn/fz17/3+CCf//AAD/f4IJ//+eVP//6hT/fz17/3/qFP9/W/7//+oUJ0HMECdBzBAnQcwQ13GFt9dxhbfXcYW3SylqCkspagpLKWoKfD7CD3w+wg98PsIPG9Cm8xvQpvMb0KbzyI4ARsiOAEbIjgBGSYypREmMqURJjKlE98wf8/fMH/P3zB/z/nBkrf5wZK3+cGStt0Y7ErdGOxK3RjsSRHSjuER0o7hEdKO4OT6QFDk+kBQ5PpAUIJUPQCCVD0AglQ9ASdY+9UnWPvVJ1j71obj+7aG4/u2huP7ttdBe8LXQXvC10F7w")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ae75o")
+
+[node name="Bush2" type="Node3D"]
+
+[node name="R3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5346299, 0)
+mesh = SubResource("ArrayMesh_fmjk6")
+skeleton = NodePath("")

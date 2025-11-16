@@ -1,0 +1,114 @@
+[gd_scene load_steps=6 format=4 uid="uid://qa6qwdyt7q8a"]
+
+[ext_resource type="Texture2D" uid="uid://dlk34nb3vg2y1" path="res://resources/psx pack 2/Branch_02.png" id="1_u8c37"]
+
+[sub_resource type="Shader" id="Shader_xjdik"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.5.1.stable's StandardMaterial3D.
+
+shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_disabled, diffuse_lambert, specular_disabled;
+
+uniform vec4 albedo : source_color;
+uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
+uniform float alpha_scissor_threshold : hint_range(0.0, 1.0, 0.001);
+uniform ivec2 albedo_texture_size;
+uniform float point_size : hint_range(0.1, 128.0, 0.1);
+
+uniform float roughness : hint_range(0.0, 1.0);
+uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap, repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
+
+uniform float specular : hint_range(0.0, 1.0, 0.01);
+uniform float metallic : hint_range(0.0, 1.0, 0.01);
+
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
+
+uniform float alpha_antialiasing_edge : hint_range(0,1) = 0.3;
+
+void vertex() {
+	UV = UV * uv1_scale.xy + uv1_offset.xy;
+}
+
+void fragment() {
+	vec2 base_uv = UV;
+
+	vec4 albedo_tex = texture(texture_albedo, base_uv);
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+	
+	ALPHA = clamp(albedo_tex.a * max(log(-VERTEX.z), 1.0), 0.0, 1.0);
+	ALPHA_SCISSOR_THRESHOLD = alpha_scissor_threshold;
+	ALPHA_ANTIALIASING_EDGE = alpha_antialiasing_edge;
+
+	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	SPECULAR = specular;
+
+	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
+	float roughness_tex = dot(texture(texture_roughness, base_uv), roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+	ALPHA *= albedo.a * albedo_tex.a;
+	ALPHA_SCISSOR_THRESHOLD = alpha_scissor_threshold;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u8c37"]
+resource_name = "Branch_02"
+render_priority = 0
+shader = SubResource("Shader_xjdik")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("1_u8c37")
+shader_parameter/alpha_scissor_threshold = 0.5
+shader_parameter/albedo_texture_size = Vector2i(256, 192)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 0.9
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/alpha_antialiasing_edge = 0.3
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_r4c35"]
+_surfaces = [{
+"aabb": AABB(-1.526756, -0.9703906, -0.9665833, 2.939747, 2.0032177, 2.0786724),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAAACAAQAAAAFAAMABgAAAAQABwAFAAAABgAIAAAABwAAAAgACQAKAAsACQAMAAoACQALAA0ACQAOAAwADwAJAA0AEAAOAAkADwARAAkAEAAJABEA"),
+"name": "Branch_02",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("mos0gEBwAACai///Ak0AANYzzP57ygAA/////0BwAAAAACxxAAAAAP//NICU/wAAySI3FhzYAAD//2kAQHAAAHCMAACJTgAAmos0gKtwAAAAACxxagAAANYzzP7lygAAySI3FofYAACai///bE0AAHCMAAD0TgAA/////6twAAD//2kAq3AAAP//NID//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pp5ct"]
+resource_name = "Plane.001"
+_surfaces = [{
+"aabb": AABB(-1.526756, -0.9703906, -0.9665833, 2.939747, 2.0032177, 2.0786724),
+"attribute_data": PackedByteArray("/3//f/9/AAD//wAAAAAAAP///38AAP9//////wAA////f////3//f////3///wAA//////9/AAD/f///AAAAAAAA//8AAP9/"),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAAACAAQAAAAFAAMABgAAAAQABwAFAAAABgAIAAAABwAAAAgACQAKAAsACQAMAAoACQALAA0ACQAOAAwADwAJAA0AEAAOAAkADwARAAkAEAAJABEA"),
+"material": SubResource("ShaderMaterial_u8c37"),
+"name": "Branch_02",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 18,
+"vertex_data": PackedByteArray("mos0gEBww/yai///Ak049dYzzP57ymr7/////0BwIuwAACxxAADM6v//NICU/87iySI3FhzYBv///2kAQHBC7HCMAACJTsz2mos0gKtwNQAAACxxagC2ANYzzP7lytwFySI3FofYPQaai///bE2PAXCMAAD0Tj0D/////6twcwb//2kAq3BtBv//NID//wAArH+YANZu1f3geErfFXgOIw6BBQz/fwAARajN+Oei5QdshKTtvP/fBN9m4YihhRlmuiItAYeNpI0YDTT06edvFalqAmgiXf9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_r4c35")
+
+[node name="Twig" type="Node3D"]
+
+[node name="R1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.270199, 0.43848273, 0)
+mesh = SubResource("ArrayMesh_pp5ct")
+skeleton = NodePath("")
